@@ -62,7 +62,7 @@
         .right {
             float: right;
             text-align: left;
-            width: 430px;
+            width: 380px;
             font-size: 18px;
             font-weight: 500;
             line-height: 1.5;
@@ -104,7 +104,7 @@
             <a href="javascript:;"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/instagram@2x.png" class="icon"></a>
             <a href="javascript:;"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/fb@2x.png" class="icon"></a>
         </div>
-        <div class="right">If you are looking for purchasing Gigalumi online, please feel free to shop at Amazon.com.<br>
+        <div class="right">If you want to purchase Gigalumi online, please feel free to shop at Amazon.com.<br>
             <a href="javascript:;" class="web">Here's our official shop on Amazon!</a>
         </div>
     </div>
