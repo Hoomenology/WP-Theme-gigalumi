@@ -1,0 +1,48 @@
+/*
+Theme Name:     Storefront Gigalumi
+Version:        0.1.0
+Template:		    storefront
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  vertical-align: middle;
+}
+
+input {
+	border: none;
+	padding: 0;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+.announcement-bar {
+  @apply bg-green-200;
+  height: 40px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+
+.site-header {
+  height: 100px;
+}
+
+.site-branding img {
+  height: 50px;
+}
+
+.sub-menu {
+  left: 0;
+  top: 90px;
+}
+
+/* .menu-link:hover {
+  @apply text-blue-0;
+} */
+
