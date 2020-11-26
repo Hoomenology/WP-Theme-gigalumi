@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-	<header id="masthead" class="site-header flex items-center relative" role="banner" style="<?php storefront_header_styles(); ?>" onmouseleave="menu_link_leave(this);">
+	<header id="masthead" class="site-header flex items-center" role="banner" style="<?php storefront_header_styles(); ?>">
 
 		<?php
 
@@ -43,7 +43,6 @@
 
     </header><!-- #masthead -->
     
-    <hr class="w-full">
     <?php
         do_action( 'gigalumi_nav' );
     ?>
