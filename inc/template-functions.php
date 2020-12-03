@@ -38,7 +38,7 @@ function gigalumi_header_container() {
                         <p class="text-gray-700">Sign Up</p>
                     </div>
                 </a>
-                <a href="/cart" class="flex flex-row items-center">
+                <a href="/cart" class="flex flex-row items-center ml-5">
                     <svg class="h-8 w-8 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>CART ( 0 )
@@ -57,7 +57,7 @@ function gigalumi_nav_container() {
                 <ul id="mega-menu-primary" class="nav-bar flex flex-row items-center justify-between h-15 ">
                     <li class="nav-bar-item" id="mega-menu-item-252" onmouseover="menu_link_over(this);">
                         <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-medium" href="http://local.gigalumi.com/shop/" aria-haspopup="true" aria-expanded="false" tabindex="0">Shop<span class="mega-indicator"></span></a>
-                        <div class="sub-menu z-50 absolute hidden w-screen border-t border-gray-800"  onmouseleave="menu_link_leave(this);">
+                        <div class="sub-menu z-50 absolute hidden w-full border-t border-gray-800"  onmouseleave="menu_link_leave(this);">
                             <div class="container">
                                 <div class="shop-navigation flex flex-row bg-white p-10">
                                     <ul class="nav-grid flex-grow grid grid-cols-3 gap-10 justify-items-center">
@@ -250,98 +250,104 @@ function gigalumi_footer_container() {
         <div class="container">
             <div class="footer-block-inner flex flex-row justify-between my-12 ">
                 <div class="footer-map text-xm">
-                    <ul class="grid grid-cols-4 gap-10">
+                    <ul class="grid grid-cols-4 gap-x-32">
                         <li class="map-item row-span-2">
-                            <p class="font-bold my-3 text-base">SUPPORT</p>
-                            <ul class="sub-menu ">
+                            <p class="font-bold my-3 text-base">Shop Gigalumi</p>
+                            <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link" href="#faq/">FAQ</a>
+                                    <a class="map-link hover:text-green-200" href="#">New Arrival</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Product Warranty Activation</a>
+                                    <a class="map-link hover:text-green-200" href="#">Path lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Payment Options</a>
+                                    <a class="map-link hover:text-green-200" href="#">Deck lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Shipping & Delivery</a>
+                                    <a class="map-link hover:text-green-200" href="#">String lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Return & Refunds</a>
+                                    <a class="map-link hover:text-green-200" href="#">Festival lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Contact Us</a>
+                                    <a class="map-link hover:text-green-200" href="#">Weekly Best Sellers</a>
+                                </li>
+                                <li class="my-4">
+                                    <a class="map-link hover:text-green-200" href="#">Top Rated Products</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="map-item row-span-2">
-                            <p class="font-bold my-3 text-base">SUPPORT</p>
-                            <ul class="sub-menu ">
+                            <p class="font-bold my-3 text-base">My Account</p>
+                            <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link" href="#faq/">FAQ</a>
+                                    <a class="map-link hover:text-green-200 relative" href="#"><svg class="absolute w-5 h-5 text-yellow-200 -left-8 top-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="currentColor"><path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/></svg> Member Benefits</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Product Warranty Activation</a>
+                                    <a class="map-link hover:text-green-200 relative" href="#"><svg class="absolute w-5 h-5 text-yellow-200 -left-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="currentColor"><path d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"/></svg> Free Product’s Trail</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Payment Options</a>
+                                    <a class="map-link hover:text-green-200" href="#">Billing/Payments</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Shipping & Delivery</a>
+                                    <a class="map-link hover:text-green-200" href="#">Profile Updated</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Return & Refunds</a>
+                                    <a class="map-link hover:text-green-200" href="#">Edit Address</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Contact Us</a>
+                                    <a class="map-link hover:text-green-200" href="#">My Orders</a>
+                                </li>
+                                <li class="my-4">
+                                    <a class="map-link hover:text-green-200" href="#">My Coupons</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="map-item row-span-2">
-                            <p class="font-bold my-3 text-base">SUPPORT</p>
-                            <ul class="sub-menu ">
+                            <p class="font-bold my-3 text-base">HELP</p>
+                            <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link" href="#faq/">FAQ</a>
+                                    <a class="map-link hover:text-green-200" href="#faq/">FAQ</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Product Warranty Activation</a>
+                                    <a class="map-link hover:text-green-200" href="#">Delivery Times</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Payment Options</a>
+                                    <a class="map-link hover:text-green-200" href="#">Return & Exchange Policy</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Shipping & Delivery</a>
+                                    <a class="map-link hover:text-green-200" href="#">Warranty Conditions</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Return & Refunds</a>
+                                    <a class="map-link hover:text-green-200" href="#">Contact Us</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Contact Us</a>
+                                    <a class="map-link hover:text-green-200" href="#">Extend Warranty</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="map-item ">
-                            <p class="font-bold my-3 text-base">SUPPORT</p>
-                            <ul class="sub-menu ">
+                            <p class="font-bold my-3 text-base">BLOG</p>
+                            <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link" href="#faq/">FAQ</a>
+                                    <a class="map-link hover:text-green-200" href="#faq/">Get Inspired!</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Product Warranty Activation</a>
+                                    <a class="map-link hover:text-green-200" href="#">Knowledge</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="map-item ">
-                            <p class="font-bold my-3 text-base">SUPPORT</p>
-                            <ul class="sub-menu ">
+                            <p class="font-bold my-3 text-base">ABBOUT GIGALUMI</p>
+                            <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link" href="#faq/">FAQ</a>
+                                    <a class="map-link hover:text-green-200" href="#faq/">About</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Product Warranty Activation</a>
+                                    <a class="map-link hover:text-green-200" href="#">Privacy Policy</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link" href="#">Payment Options</a>
+                                    <a class="map-link hover:text-green-200" href="#">Terms & Conditions</a>
                                 </li>
                             </ul>
                         </li>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Euhomy hooks
+ * Gigalumi hooks
  *
  * @package gigalumi
  */

@@ -8,6 +8,18 @@ module.exports = {
         lg: '1024px',
         xl: '1440px',
       },
+      inset: {
+        '-1': '-0.25rem',
+        '-2': '-0.5rem',
+        '-3': '-0.75rem',
+        '-4': '-1rem',
+        '-5': '-1.25rem',
+        '-6': '-1.5rem',
+        '-7': '-1.75rem',
+        '-8': '-2rem',
+        '-9': '-2.25rem',
+        '-10': '-2.5rem',
+      },
       spacing: {
         px: '1px',
         '0': '0',
@@ -53,7 +65,10 @@ module.exports = {
           '100': '#ca1515',
           '200': '#da0f29',
         },
-        yellow: '#ffec94',
+        yellow: {
+          '100': '#ffec94',
+          '200': '#ff9100'
+        },
         orange: {
           '100': '#faf9f7',
           '200': '#faf7f5',
@@ -101,7 +116,7 @@ module.exports = {
         padding: {
           default: '1rem',
           sm: '2rem',
-          lg: '4rem',
+          lg: '0',
           xl: '0',
         },
       },

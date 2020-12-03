@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'euhomy_enqueue_scripts' );
  * as the sf_child_theme_dequeue_style() function declaration.
  */
 
-add_action( 'wp_enqueue_scripts', 'sf_child_theme_dequeue_style', 999 );
+// add_action( 'wp_enqueue_scripts', 'sf_child_theme_dequeue_style', 999 );
 
 /**
  * Dequeue the Storefront Parent theme core CSS
@@ -36,8 +36,75 @@ function sf_child_theme_dequeue_style() {
     wp_dequeue_style( 'storefront-woocommerce-style' );
 }
 
+function gigalumi_product_add_to_cart_url($url, $product) {
+    $type = $product->get_type();
+    switch ( $type ) {
+        case 'simple':
+        default:
+            return $url;
+        case 'variable':
+            if ( $product->is_purchasable() && $product->is_in_stock() ) {
+                $is_in_stock_num = 0;
+                $variations = $product->get_available_variations();
+                foreach ( $variations as $k => $v ) {
+                    if ( $v['is_in_stock'] === false ) {
+                        unset($variations[$k]);
+                    } else {
+                        $is_in_stock_num += 1;
+                        if ( $is_in_stock_num > 1 ) {
+                            break;
+                        }
+                    }
+                }
+                if ( $is_in_stock_num === 1 ) {
+                    return remove_query_arg(
+                        'added-to-cart',
+                        add_query_arg(
+                            array(
+                                'variation_id' => $variations[0]['variation_id'],
+                                'add-to-cart'  => $product->get_id(),
+                            ),
+                            $product->get_permalink()
+                        )
+                    );
+                } else {
+                    return $url;
+                }
+            } else {
+                return $url;
+            }
+    }
+}
 
-add_action( 'rest_api_init', 'register_rest_routes' );
+add_filter( 'woocommerce_product_add_to_cart_url', 'gigalumi_product_add_to_cart_url', 10, 2);
+
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'gigalumi_product_add_to_cart_text', 10, 2);
+
+add_filter( 'woocommerce_loop_add_to_cart_link', 'gigalumi_product_add_to_cart_link', 10, 2);
+
+function gigalumi_product_add_to_cart_text($text, $product) {
+    return 'gigalumi-add-cart';
+}
+
+function gigalumi_product_add_to_cart_link($link, $product) {
+    return str_replace( 'gigalumi-add-cart', '<svg class="h-6 w-6 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>', $link );
+}
+
+add_action( 'woocommerce_before_shop_loop', 'gigalumi_woo_filter' );
+
+function gigalumi_woo_filter() {
+    echo do_shortcode('[wpf-filters id=1]');
+}
+
+add_action( 'woocommerce_before_quantity_input_field', 'before_quantity_input_field' );
+
+function before_quantity_input_field() {
+    echo 'QTY';
+}
+
+
+// add_action( 'rest_api_init', 'register_rest_routes' );
 
 function register_rest_routes() {
     register_rest_route( 'gigalumi/v1', 'post_for_coupon', [ 'methods' => 'post', 'callback' => 'exec_coupon_post'] );
@@ -73,14 +140,14 @@ function exec_coupon_post( $request ) {
     $data['post_type'] = 'acquire_coupon';
     $data['post_status'] = 'inherit';
     $data['post_author'] = $user_id;
-//    $id = wp_insert_post( $data, true );
-//
-//    if ( is_wp_error( $id ) ) {
-//        return rest_ensure_response( ['code' => 500, 'message' => 'database server error'] );
-//    }
-//
-//    // Set coupon meta
-//    update_post_meta( $id, 'plat', 2 );
-    
+   /*$id = wp_insert_post( $data, true );
+
+   if ( is_wp_error( $id ) ) {
+       return rest_ensure_response( ['code' => 500, 'message' => 'database server error'] );
+   }
+
+   // Set coupon meta
+   update_post_meta( $id, 'plat', 2 );
+    */
     return rest_ensure_response( ['code' => 200, 'data' => $data] );
 }
