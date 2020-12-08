@@ -98,9 +98,18 @@ function gigalumi_woo_filter() {
 }
 
 add_action( 'woocommerce_before_quantity_input_field', 'before_quantity_input_field' );
+add_action( 'woocommerce_after_quantity_input_field', 'after_quantity_input_field' );
 
 function before_quantity_input_field() {
-    echo 'QTY';
+    echo 'QTY <div class="quantity-selector"><button type="button" onclick="quantity_pick(this,-1);" class="quantity-selector-button" data-action="decrease-picker-quantity" aria-label="Decrease quantity by 1" title="Decrease quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+  </svg></button>';
+}
+
+function after_quantity_input_field() {
+    echo '<button type="button" onclick="quantity_pick(this,1);" class="quantity-selector-button" data-action="increase-picker-quantity" aria-label="Increase quantity by 1" title="Increase quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+  </svg></button></div>';
 }
 
 

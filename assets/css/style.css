@@ -157,6 +157,14 @@ li.product .woocommerce-LoopProduct-link .star-rating {
   @apply text-orange-300;
 }
 
+.columns-3 {
+  @apply grid grid-cols-3;
+}
+
+.products.columns-3 {
+  @apply  gap-6;
+}
+
 .columns-4 {
   @apply grid grid-cols-4;
 }
@@ -219,11 +227,35 @@ Single-product
 }
 
 .single-product div.product #pa_color {
-  @apply border border-gray-200 p-2;
+  @apply border border-gray-300 p-2;
 }
 
-.quantity input.qty {
-  @apply border border-solid border-gray-200 p-2;
+.quantity {
+  @apply flex items-center;
+}
+
+.quantity-selector {
+  @apply h-12 inline-flex m-3 border border-gray-300 rounded-3;
+}
+
+.quantity-selector input.qty {
+  @apply border-0 border-l border-r  border-solid border-gray-300 p-2 h-full appearance-none;
+}
+
+.quantity-selector input.qty::-webkit-inner-spin-button {
+  @apply appearance-none;
+}
+
+.quantity-selector .quantity-selector-button {
+  @apply flex items-center px-4 h-full text-black;
+}
+
+.quantity-selector .quantity-selector-button:hover {
+  @apply text-green-400;
+}
+
+.quantity-selector .quantity-selector-button:disabled {
+  @apply cursor-not-allowed text-gray-600;
 }
 
 .single-product .single_add_to_cart_button {
@@ -240,4 +272,32 @@ Single-product
 
 .cart .pisol_single_buy_now:hover {
   @apply border-orange-400 bg-orange-400 ;
+}
+
+.qae-faqs-container .qe-faqs-filters-container {
+  @apply hidden ;
+}
+
+.qae-faqs-container .qe-toggle-title {
+  @apply flex items-center justify-between;
+}
+
+.qae-faqs-container .qe-faq-toggle {
+  @apply border-b border-gray-500;
+}
+
+.ivole-meter .ivole-meter-bar {
+  border-radius: 1px;
+  background: #de8800;
+  /* background: -webkit-linear-gradient(top,#ffce00,#ffa700);
+  background: linear-gradient(to bottom,#de8800,#de8800); */
+  background-color: #de8800;
+}
+
+.qe-toggle-content table tr td {
+  @apply border-t border-b border-l-0 border-r-0 border-gray-300 w-1/2;
+}
+
+.qe-toggle-content table tr td:first-child {
+  @apply bg-gray-100;
 }
