@@ -388,7 +388,54 @@ table.cart .coupon button {
 Checkout
 
 */
+body.woocommerce-checkout form.woocommerce-cart-form {
+  @apply hidden;
+}
 
 .woocommerce-checkout .woocommerce-form-coupon-toggle {
   @apply hidden;
+}
+
+#order_review_heading {
+  @apply text-lg font-black;
+}
+
+#order_review {
+  @apply border border-gray-300 rounded-10 shadow-2xl;
+}
+
+.wc-stripe-save-source {
+  @apply flex items-center flex-row-reverse;
+}
+
+.wc-stripe-save-source .save-source-label {
+  @apply mx-2 mt-1;
+}
+
+#payment .place-order {
+  @apply mt-0 ;
+}
+
+#place_order {
+  @apply bg-green-200 rounded-5 mx-auto h-12 leading-12 px-10 text-white block;
+}
+
+#place_order:hover {
+  @apply bg-green-300;
+}
+
+#customer_details {
+  width: 42%;
+}
+
+#customer_details h3 {
+  @apply text-lg font-black;
+}
+
+#customer_details input {
+  @apply border border-gray-500 border-solid rounded-5 p-1;
+}
+
+#customer_details .form-row {
+  @apply my-1;
 }

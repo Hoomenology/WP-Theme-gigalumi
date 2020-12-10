@@ -25,7 +25,9 @@
 <?php do_action( 'storefront_before_site' ); ?>
 
 <div id="page" class="hfeed site">
-	<?php do_action( 'storefront_before_header' ); ?>
+    <?php do_action( 'storefront_before_header' ); ?>
+    
+    <?php if ( ! is_checkout() ) { ?>
     <div class="announcement-bar">
         <div class="container">
             <div class="announcement-bar-inner">
@@ -33,6 +35,8 @@
             </div>
         </div>
     </div>
+    <?php } ?>
+
 	<header id="masthead" class="site-header flex items-center" role="banner" style="<?php storefront_header_styles(); ?>">
 
 		<?php
@@ -44,7 +48,9 @@
     </header><!-- #masthead -->
     
     <?php
-        do_action( 'gigalumi_nav' );
+        if ( ! is_checkout() ) {
+            do_action( 'gigalumi_nav' );
+        }
     ?>
 
 	<?php
@@ -54,7 +60,9 @@
 	 * @hooked storefront_header_widget_region - 10
 	 * @hooked woocommerce_breadcrumb - 10
 	 */
-	do_action( 'storefront_before_content' );
+    if ( ! is_checkout()) {
+        do_action( 'storefront_before_content' );
+    }
 	?>
 
 	<div id="content" class="site-content" tabindex="-1">

@@ -245,6 +245,7 @@ function gigalumi_nav_container() {
 }
 
 function gigalumi_footer_container() {
+    if ( ! is_checkout()) {
     ?>
     <div class="footer-block border-t border-green-200">
         <div class="container">
@@ -387,6 +388,7 @@ function gigalumi_footer_container() {
             </svg></a>
         </div>
     </div>
+    <?php }?>
     <div class="footer-aside text-gray-700 w-full border-t border-gray-300 pt-3 pb-2">
         <div class="container">
             <div class="footer-aside-inner flex flex-row justify-between items-center py-2">
