@@ -101,7 +101,7 @@ add_action( 'woocommerce_before_quantity_input_field', 'before_quantity_input_fi
 add_action( 'woocommerce_after_quantity_input_field', 'after_quantity_input_field' );
 
 function before_quantity_input_field() {
-    echo 'QTY <div class="quantity-selector"><button type="button" onclick="quantity_pick(this,-1);" class="quantity-selector-button" data-action="decrease-picker-quantity" aria-label="Decrease quantity by 1" title="Decrease quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    echo '<span class="quantity-desc">QTY</span><div class="quantity-selector"><button type="button" onclick="quantity_pick(this,-1);" class="quantity-selector-button" data-action="decrease-picker-quantity" aria-label="Decrease quantity by 1" title="Decrease quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
   </svg></button>';
 }

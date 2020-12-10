@@ -20,6 +20,10 @@ function quantity_pick(e, step) {
   let max = Number(qty_input.max);
   step = Number(step);
 
+  let update_cart = document.querySelector('table.cart button[name="update_cart"]');
+  if (update_cart) {
+    update_cart.disabled = false;
+  }
   if ((current_value <= min && step < 0) | (current_value >= max && step > 0)) {
     e.disabled = true;
   } else {

@@ -301,3 +301,94 @@ Single-product
 .qe-toggle-content table tr td:first-child {
   @apply bg-gray-100;
 }
+
+
+/*
+Cart
+
+*/
+.return-to-shop .wc-backward {
+  @apply block rounded-3 w-56 h-12 leading-12 bg-orange-500 text-white text-sm text-center uppercase font-bold; 
+}
+
+
+.entry-title {
+  @apply text-4xl;
+}
+
+table.cart thead {
+  @apply hidden;
+}
+
+table.cart tr.cart_item {
+  @apply border-b border-gray-400;
+}
+
+table.cart .product-thumbnail img {
+  @apply w-34;
+}
+
+table.cart td.product-name {
+  @apply font-bold;
+}
+
+table.cart td.product-price {
+  @apply text-red-200;
+}
+
+table.cart td.product-subtotal {
+  @apply font-black;
+}
+
+table.cart .quantity-desc {
+  @apply hidden;
+}
+
+table.cart .quantity-selector {
+  @apply m-0;
+}
+
+table.cart button[name="update_cart"] {
+  @apply border border-solid border-orange-500 text-orange-500 rounded-3 h-12 px-15;
+}
+
+table.cart button[name="update_cart"]:disabled {
+  @apply border-gray-600 text-gray-600;
+}
+
+table.cart button[name="update_cart"]:enabled:hover {
+  @apply bg-orange-500 text-white;
+}
+
+table.cart .coupon {
+  @apply border border-black h-12 flex rounded-3;
+}
+
+table.cart .coupon input {
+  @apply p-2;
+}
+
+table.cart .coupon button {
+  @apply bg-black text-white h-full px-5;
+}
+
+.cart_totals {
+  @apply bg-gray-200 p-8;
+}
+
+.cart_totals h2 {
+  @apply text-lg font-bold;
+}
+
+.wc-proceed-to-checkout .checkout-button {
+  @apply block text-center mx-auto leading-12 h-12 bg-orange-500 text-white;
+}
+
+/*
+Checkout
+
+*/
+
+.woocommerce-checkout .woocommerce-form-coupon-toggle {
+  @apply hidden;
+}

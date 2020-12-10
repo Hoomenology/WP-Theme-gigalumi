@@ -40,6 +40,7 @@ module.exports = {
         '20': '5rem',
         '24': '6rem',
         '32': '8rem',
+        '34': '8.5rem',
         '40': '10rem',
         '48': '12rem',
         '56': '14rem',
@@ -47,6 +48,7 @@ module.exports = {
         '75': '18.75rem',
       },
       lineHeight: {
+        '12': '3rem',
         '15': '3.75rem',
       },
       colors: {
