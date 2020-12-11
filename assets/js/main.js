@@ -42,3 +42,17 @@ function quantity_pick(e, step) {
     }
   }
 }
+
+function header_cart_over(e) {
+  let triangle = e.parentNode.querySelector('.nav-triangle-borderless');
+  let cart = e.parentNode.querySelector('.header-cart-list');
+  triangle.classList.remove('hidden');
+  cart.classList.remove('hidden');
+}
+
+function header_cart_leave(e) {
+  let triangle = e.parentNode.querySelector('.nav-triangle-borderless');
+  let cart = e.parentNode.querySelector('.header-cart-list');
+  triangle.classList.add('hidden');
+  cart.className += ' hidden';
+}

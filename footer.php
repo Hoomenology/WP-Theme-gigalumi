@@ -14,7 +14,7 @@
 
 	<?php do_action( 'storefront_before_footer' ); ?>
 
-	<footer id="colophon" class="site-footer text-xs" role="contentinfo">
+	<footer id="colophon" class="site-footer text-xs bg-gray-100" role="contentinfo">
 			<?php
 			/**
 			 * Functions hooked in to storefront_footer action

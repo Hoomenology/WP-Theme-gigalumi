@@ -10,12 +10,11 @@ function gigalumi_header_container() {
         <div class="header-search flex-1 flex items-center">
             <form role="search" method="get" class="w-full m-0" action="/">
                 <label for="search-field" class="flex flex-row items-center bg-gray-100 border rounded-5 border-gray-300 h-12 px-3">
-                    <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" value="" name="s">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" required value="" name="s">
+                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
+                    </svg></button>
                 </label>
-                <button type="submit" value="Search" class="hidden">Search</button>
                 <input type="hidden" name="post_type" value="product">
             </form>
         </div>
@@ -34,15 +33,25 @@ function gigalumi_header_container() {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
+                        <?php if ( is_user_logged_in() ) { ?>
                         <p>MY ACCOUNT</p>
-                        <p class="text-gray-700">Sign Up</p>
+                        <?php } else { ?>
+                        <p class="text-gray-700">Sign In</p>
+                        <?php } ?>
                     </div>
                 </a>
-                <a href="/cart" class="flex flex-row items-center ml-5">
-                    <svg class="h-8 w-8 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="cart relative">
+                    <a href="/cart" class="flex flex-row items-center ml-5 " onmouseover="header_cart_over(this);" >
+                        <svg class="h-8 w-8 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>CART ( 0 )
-                </a>
+                        </svg>CART ( <?php echo WC()->cart->get_cart_contents_count(); ?> )
+                    </a>
+                    <?php if ( ! ( is_cart() || is_checkout() ) ) {?>
+                    <svg class="nav-triangle-borderless hidden" viewBox="0 0 20 9" role="presentation"><path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path></svg>
+                    <div class="header-cart-list hidden" onmouseleave="header_cart_leave(this);">
+                        <?php the_widget( 'WC_Widget_Cart', 'title=' ); }?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -57,7 +66,7 @@ function gigalumi_nav_container() {
                 <ul id="mega-menu-primary" class="nav-bar flex flex-row items-center justify-between h-15 ">
                     <li class="nav-bar-item" id="mega-menu-item-252" onmouseover="menu_link_over(this);">
                         <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-medium" href="http://local.gigalumi.com/shop/" aria-haspopup="true" aria-expanded="false" tabindex="0">Shop<span class="mega-indicator"></span></a>
-                        <div class="sub-menu z-50 absolute hidden w-full border-t border-gray-800"  onmouseleave="menu_link_leave(this);">
+                        <div class="sub-menu z-100 absolute hidden w-full border-t border-gray-800"  onmouseleave="menu_link_leave(this);">
                             <div class="container">
                                 <div class="shop-navigation flex flex-row bg-white p-10">
                                     <ul class="nav-grid flex-grow grid grid-cols-3 gap-10 justify-items-center">
@@ -247,6 +256,28 @@ function gigalumi_nav_container() {
 function gigalumi_footer_container() {
     if ( ! is_checkout()) {
     ?>
+    <div class="footer-shop-info container flex justify-around items-center h-24 text-base text-black ">
+        <div class="shop-info-item flex items-center">
+            <svg class="w-10 h-10 mx-5 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor"><path fill="#fff" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+           <p>Free Shipping on Orders Over $99</p>
+        </div>
+        <div class="shop-info-item flex items-center">
+            <svg class="w-10 h-10 mx-5 text-green-200" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M864 483.2V384a352 352 0 0 0-704 0v99.2A160 160 0 0 0 192 800h96a64 64 0 0 0 64-64v-192a64 64 0 0 0-64-64H224v-96a288 288 0 0 1 576 0v96h-64a64 64 0 0 0-64 64v192a64 64 0 0 0 64 64h58.24A96 96 0 0 1 704 864h-101.76a96 96 0 1 0 0 64H704a160 160 0 0 0 157.12-130.88A160 160 0 0 0 864 483.2zM160 730.56a96 96 0 0 1 0-181.12zM288 544v192H224v-192z m224 384a32 32 0 1 1 32-32 32 32 0 0 1-32 32z m288-192h-64v-192h64z m64-5.44v-181.12a96 96 0 0 1 0 181.12z" fill="currentColor"></path></svg>
+            <p>Reply Within 24 hours</p>
+        </div>
+        <div class="shop-info-item flex items-center">
+            <svg class="w-10 h-10 mx-5 text-green-200" viewBox="0 0 26 26" role="presentation">
+                <g transform="translate(1 1)" stroke-width="1.5" fill="none" fill-rule="evenodd">
+                    <path stroke="currentColor" d="M8 4h8v7"></path>
+                    <path stroke="currentColor" stroke-linecap="square" d="M11 7L8 4l3-3"></path>
+                    <circle stroke="currentColor" stroke-linecap="square" cx="6" cy="20" r="2"></circle>
+                    <circle stroke="currentColor" stroke-linecap="square" cx="18" cy="20" r="2"></circle>
+                    <path stroke="currentColor" stroke-linecap="square" d="M21 5l-2 10H5L3 0H0"></path>
+                </g>
+            </svg>
+            <p>Returns & Exchange within 30 days</p>
+        </div>
+    </div>
     <div class="footer-block border-t border-green-200">
         <div class="container">
             <div class="footer-block-inner flex flex-row justify-between my-12 ">
@@ -358,7 +389,7 @@ function gigalumi_footer_container() {
                     <div class="subscribe my-3">
                         <form action="">
                             <p class="font-semibold">BE THE FIRST TO KNOW ABOUT OUR SALES!</p>
-                            <label class="my-6 flex h-14 text-center border border-gray-800 rounded-5" for="email"><input class="flex-1 mx-3" type="email" name="email" id="email" placeholder="Email Address"><input class="bg-black text-white font-bold h-full px-2" type="submit" value="SUBSCRIBE"></label>
+                            <label class="my-6 flex h-14 text-center border border-gray-800 rounded-5" for="email"><input class="flex-1 mx-3 bg-gray-100" type="email" name="email" id="email" placeholder="Email Address"><input class="bg-black text-white font-bold h-full px-2" type="submit" value="SUBSCRIBE"></label>
                         </form>
                     </div>
                     <div class="call-us">
