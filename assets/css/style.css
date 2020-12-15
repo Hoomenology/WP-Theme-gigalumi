@@ -249,6 +249,10 @@ a.woocommerce-loop-product__link:hover {
   @apply text-green-200;
 }
 
+.product-action a.quick_view svg {
+  @apply inline-block w-6 h-6 mx-2;
+}
+
 .product-action .add_to_cart_button {
   @apply bg-white border border-gray-500 rounded-3 mr-15 ml-3 h-full pt-2 pb-3;
 }
@@ -428,6 +432,10 @@ table.cart .coupon button {
   @apply text-lg font-bold;
 }
 
+.cart-discount {
+  @apply text-red-200;
+}
+
 .wc-proceed-to-checkout .checkout-button {
   @apply block text-center mx-auto leading-12 h-12 bg-orange-500 text-white;
 }
@@ -488,6 +496,10 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   @apply my-1;
 }
 
+.woocommerce-order .woocommerce-customer-details address {
+  @apply bg-gray-100;
+}
+
 /**
 My Account
 */
@@ -514,4 +526,51 @@ My Account
 
 #customer_login .woocommerce-form-register__submit {
   @apply rounded-6 border border-solid border-black text-black py-3 px-24 uppercase font-bold ;
+}
+
+body.logged-in.woocommerce-account #content {
+  @apply bg-blue-100;
+}
+
+.woocommerce-MyAccount-navigation, .woocommerce-MyAccount-content {
+  @apply bg-white p-7;
+}
+
+.woocommerce-MyAccount-navigation-link {
+  @apply bg-green-100 rounded-6 text-black;
+}
+.woocommerce-MyAccount-navigation-link:hover, .woocommerce-MyAccount-navigation-link.is-active {
+  @apply text-green-200;
+}
+
+.woocommerce-MyAccount-content .woocommerce-Addresses {
+  @apply flex flex-col;
+}
+
+.woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address {
+  @apply bg-orange-200 rounded-10 p-5;
+}
+
+.woocommerce-MyAccount-content h3 {
+  @apply text-sm;
+}
+
+.woocommerce-MyAccount-content form .woocommerce-address-fields {
+  @apply bg-green-100 rounded-10 p-3;
+}
+
+.woocommerce-MyAccount-content .form-row {
+  @apply my-2;
+}
+
+.woocommerce-MyAccount-content .input-text {
+  @apply border border-solid border-gray-500 rounded-5 p-2;
+}
+
+.woocommerce-MyAccount-content form .woocommerce-address-fields button[type="submit"] {
+  @apply text-green-200 font-bold;
+}
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm button[type="submit"] {
+  @apply rounded-10 bg-green-300 py-4 px-12 text-white font-bold;
 }

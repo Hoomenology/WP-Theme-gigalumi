@@ -31,7 +31,7 @@
     <div class="announcement-bar">
         <div class="container">
             <div class="announcement-bar-inner">
-                <a href="/shop"> Join and get 10% Off on Your first order <span class="text-yellow">Join Us >></span></a>
+                <a href="/shop"> Join and get 10% Off on Your first order <span class="text-yellow-100">Join Us >></span></a>
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
 	 * @hooked storefront_header_widget_region - 10
 	 * @hooked woocommerce_breadcrumb - 10
 	 */
-    if ( ! is_checkout()) {
+    if ( ! is_checkout() && ! is_account_page()) {
         do_action( 'storefront_before_content' );
     }
 	?>

@@ -20485,6 +20485,14 @@ a.woocommerce-loop-product__link:hover {
   color: rgba(32, 106, 93, var(--text-opacity));
 }
 
+.product-action a.quick_view svg {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .product-action .add_to_cart_button {
   --bg-opacity: 1;
   background-color: #fff;
@@ -20838,6 +20846,12 @@ table.cart .coupon button {
   font-weight: 700;
 }
 
+.cart-discount {
+  --text-opacity: 1;
+  color: #da0f29;
+  color: rgba(218, 15, 41, var(--text-opacity));
+}
+
 .wc-proceed-to-checkout .checkout-button {
   display: block;
   text-align: center;
@@ -20943,6 +20957,12 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   margin-bottom: 0.25rem;
 }
 
+.woocommerce-order .woocommerce-customer-details address {
+  --bg-opacity: 1;
+  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, var(--bg-opacity));
+}
+
 /**
 My Account
 */
@@ -21003,6 +21023,97 @@ My Account
   padding-left: 6rem;
   padding-right: 6rem;
   text-transform: uppercase;
+  font-weight: 700;
+}
+
+body.logged-in.woocommerce-account #content {
+  --bg-opacity: 1;
+  background-color: #f5f6fa;
+  background-color: rgba(245, 246, 250, var(--bg-opacity));
+}
+
+.woocommerce-MyAccount-navigation, .woocommerce-MyAccount-content {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  padding: 1.75rem;
+}
+
+.woocommerce-MyAccount-navigation-link {
+  --bg-opacity: 1;
+  background-color: #f2f7f6;
+  background-color: rgba(242, 247, 246, var(--bg-opacity));
+  border-radius: 6px;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.woocommerce-MyAccount-navigation-link:hover, .woocommerce-MyAccount-navigation-link.is-active {
+  --text-opacity: 1;
+  color: #206a5d;
+  color: rgba(32, 106, 93, var(--text-opacity));
+}
+
+.woocommerce-MyAccount-content .woocommerce-Addresses {
+  display: flex;
+  flex-direction: column;
+}
+
+.woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address {
+  --bg-opacity: 1;
+  background-color: #faf7f5;
+  background-color: rgba(250, 247, 245, var(--bg-opacity));
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.woocommerce-MyAccount-content h3 {
+  font-size: 18px;
+}
+
+.woocommerce-MyAccount-content form .woocommerce-address-fields {
+  --bg-opacity: 1;
+  background-color: #f2f7f6;
+  background-color: rgba(242, 247, 246, var(--bg-opacity));
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.woocommerce-MyAccount-content .form-row {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.woocommerce-MyAccount-content .input-text {
+  border-width: 1px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #b8b8b8;
+  border-color: rgba(184, 184, 184, var(--border-opacity));
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.woocommerce-MyAccount-content form .woocommerce-address-fields button[type="submit"] {
+  --text-opacity: 1;
+  color: #206a5d;
+  color: rgba(32, 106, 93, var(--text-opacity));
+  font-weight: 700;
+}
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm button[type="submit"] {
+  border-radius: 10px;
+  --bg-opacity: 1;
+  background-color: #2b8172;
+  background-color: rgba(43, 129, 114, var(--bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
   font-weight: 700;
 }
 
