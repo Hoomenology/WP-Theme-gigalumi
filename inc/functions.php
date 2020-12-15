@@ -112,6 +112,13 @@ function after_quantity_input_field() {
   </svg></button></div>';
 }
 
+add_action( 'woocommerce_register_form', 'the_gigalumi_register_notice' );
+
+function the_gigalumi_register_notice() {
+    echo '<p>After you create an account on gigalumi.com, you will be a member of 
+    Gigalumi, and can enjoy different member benefits according to your 
+    membership level. </p>';
+}
 
 // add_action( 'rest_api_init', 'register_rest_routes' );
 

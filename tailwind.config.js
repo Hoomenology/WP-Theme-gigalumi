@@ -120,6 +120,7 @@ module.exports = {
         '1': '1px',
         '3': '3px',
         '5': '5px',
+        '6': '6px',
         '10': '10px',
         '15': '15px',
         '20': '20px',
@@ -131,6 +132,15 @@ module.exports = {
         '3': '3',
         '99': '99',
         '100': '100',
+      },
+      divideWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '3': '3px',
+        '4': '4px',
+        '6': '6px',
+        '8': '8px',
       },
       container: {
         center: true,

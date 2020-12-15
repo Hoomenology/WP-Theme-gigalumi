@@ -26,8 +26,17 @@ input:focus, textarea:focus {
 	outline: none;
 }
 
+h1 {
+  @apply text-4xl;
+}
 
+h2 {
+  @apply text-xl;
+}
 
+h1.entry-title {
+  @apply py-10;
+}
 /*
 Header
 */
@@ -125,52 +134,27 @@ Header
 Content
 
 */
-.col-full {
+.col-full, .site-main, .site-content > .woocommerce {
   @apply w-full m-auto;
   padding: theme('container.padding.default');
 }
 
 @screen sm {
-  .col-full {
+  .col-full, .site-main, .site-content > .woocommerce {
     max-width: theme('screens.sm');
     padding: theme('container.padding.sm');
   }
 }
 
 @screen lg {
-  .col-full {
+  .col-full, .site-main, .site-content > .woocommerce {
     max-width: theme('screens.lg');
     padding: theme('container.padding.lg');
   }
 } 
 
 @screen xl {
-  .col-full {
-    max-width: theme('screens.xl');
-    padding: theme('container.padding.xl');
-  }
-}
-.site-main {
-  @apply w-full m-auto;
-  padding: theme('container.padding.default');
-}
-
-@screen sm {
-  .site-main {
-    max-width: theme('screens.sm');
-    padding: theme('container.padding.sm');
-  }
-}
-
-@screen lg {
-  .site-main {
-    max-width: theme('screens.lg');
-    padding: theme('container.padding.lg');
-  }
-} 
-
-@screen xl {
-  .site-main {
+  .col-full, .site-main, .site-content > .woocommerce {
     max-width: theme('screens.xl');
     padding: theme('container.padding.xl');
   }
@@ -502,4 +486,32 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 
 #customer_details .form-row {
   @apply my-1;
+}
+
+/**
+My Account
+*/
+
+#customer_login .input-text {
+  @apply border-2 border-solid border-gray-300 rounded-3 p-3;
+}
+
+#customer_login p {
+  @apply my-2;
+}
+
+#customer_login .woocommerce-form-login__rememberme {
+  @apply my-3;
+}
+
+#customer_login .woocommerce-form-login__submit {
+  @apply rounded-6 bg-green-200 py-3 px-24 text-white uppercase font-bold;
+}
+
+.the_champ_outer_login_container {
+  @apply my-5;
+}
+
+#customer_login .woocommerce-form-register__submit {
+  @apply rounded-6 border border-solid border-black text-black py-3 px-24 uppercase font-bold ;
 }

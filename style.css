@@ -1250,6 +1250,18 @@ video {
   border-left-width: calc(2px * calc(1 - var(--divide-x-reverse)));
 }
 
+.divide-y-3 > :not(template) ~ :not(template) {
+  --divide-y-reverse: 0;
+  border-top-width: calc(3px * calc(1 - var(--divide-y-reverse)));
+  border-bottom-width: calc(3px * var(--divide-y-reverse));
+}
+
+.divide-x-3 > :not(template) ~ :not(template) {
+  --divide-x-reverse: 0;
+  border-right-width: calc(3px * var(--divide-x-reverse));
+  border-left-width: calc(3px * calc(1 - var(--divide-x-reverse)));
+}
+
 .divide-y-4 > :not(template) ~ :not(template) {
   --divide-y-reverse: 0;
   border-top-width: calc(4px * calc(1 - var(--divide-y-reverse)));
@@ -1260,6 +1272,18 @@ video {
   --divide-x-reverse: 0;
   border-right-width: calc(4px * var(--divide-x-reverse));
   border-left-width: calc(4px * calc(1 - var(--divide-x-reverse)));
+}
+
+.divide-y-6 > :not(template) ~ :not(template) {
+  --divide-y-reverse: 0;
+  border-top-width: calc(6px * calc(1 - var(--divide-y-reverse)));
+  border-bottom-width: calc(6px * var(--divide-y-reverse));
+}
+
+.divide-x-6 > :not(template) ~ :not(template) {
+  --divide-x-reverse: 0;
+  border-right-width: calc(6px * var(--divide-x-reverse));
+  border-left-width: calc(6px * calc(1 - var(--divide-x-reverse)));
 }
 
 .divide-y-8 > :not(template) ~ :not(template) {
@@ -1281,6 +1305,18 @@ video {
 }
 
 .divide-x > :not(template) ~ :not(template) {
+  --divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+}
+
+.divide-y-DEFAULT > :not(template) ~ :not(template) {
+  --divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--divide-y-reverse));
+}
+
+.divide-x-DEFAULT > :not(template) ~ :not(template) {
   --divide-x-reverse: 0;
   border-right-width: calc(1px * var(--divide-x-reverse));
   border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
@@ -7263,6 +7299,10 @@ video {
   border-radius: 5px;
 }
 
+.rounded-6 {
+  border-radius: 6px;
+}
+
 .rounded-10 {
   border-radius: 10px;
 }
@@ -7369,6 +7409,26 @@ video {
 .rounded-l-5 {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+.rounded-t-6 {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.rounded-r-6 {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.rounded-b-6 {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.rounded-l-6 {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .rounded-t-10 {
@@ -7657,6 +7717,22 @@ video {
 
 .rounded-bl-5 {
   border-bottom-left-radius: 5px;
+}
+
+.rounded-tl-6 {
+  border-top-left-radius: 6px;
+}
+
+.rounded-tr-6 {
+  border-top-right-radius: 6px;
+}
+
+.rounded-br-6 {
+  border-bottom-right-radius: 6px;
+}
+
+.rounded-bl-6 {
+  border-bottom-left-radius: 6px;
 }
 
 .rounded-tl-10 {
@@ -20089,6 +20165,19 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1.entry-title {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 /*
 Header
 */
@@ -20135,7 +20224,7 @@ Header
   filter: drop-shadow(0 -2px 0px rgba(0, 0, 0, 0.12));
 }
 
-.widget_shopping_cart {
+.header-cart-list {
   border-radius: 5px;
   --text-opacity: 1;
   color: #000;
@@ -20237,55 +20326,28 @@ Content
 
 */
 
-.col-full {
+.col-full, .site-main, .site-content > .woocommerce {
   width: 100%;
   margin: auto;
   padding: 1rem;
 }
 
 @media (min-width: 640px) {
-  .col-full {
+  .col-full, .site-main, .site-content > .woocommerce {
     max-width: 640px;
     padding: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .col-full {
+  .col-full, .site-main, .site-content > .woocommerce {
     max-width: 1024px;
     padding: 0;
   }
 }
 
 @media (min-width: 1440px) {
-  .col-full {
-    max-width: 1440px;
-    padding: 0;
-  }
-}
-
-.site-main {
-  width: 100%;
-  margin: auto;
-  padding: 1rem;
-}
-
-@media (min-width: 640px) {
-  .site-main {
-    max-width: 640px;
-    padding: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .site-main {
-    max-width: 1024px;
-    padding: 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  .site-main {
+  .col-full, .site-main, .site-content > .woocommerce {
     max-width: 1440px;
     padding: 0;
   }
@@ -20879,6 +20941,69 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 #customer_details .form-row {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+/**
+My Account
+*/
+
+#customer_login .input-text {
+  border-width: 2px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #e5e5e5;
+  border-color: rgba(229, 229, 229, var(--border-opacity));
+  border-radius: 3px;
+  padding: 0.75rem;
+}
+
+#customer_login p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#customer_login .woocommerce-form-login__rememberme {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#customer_login .woocommerce-form-login__submit {
+  border-radius: 6px;
+  --bg-opacity: 1;
+  background-color: #206a5d;
+  background-color: rgba(32, 106, 93, var(--bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.the_champ_outer_login_container {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+#customer_login .woocommerce-form-register__submit {
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 @media (min-width: 640px) {
@@ -21540,6 +21665,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-left-width: calc(2px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .sm\:divide-y-3 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--divide-y-reverse));
+  }
+
+  .sm\:divide-x-3 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .sm\:divide-y-4 > :not(template) ~ :not(template) {
     --divide-y-reverse: 0;
     border-top-width: calc(4px * calc(1 - var(--divide-y-reverse)));
@@ -21550,6 +21687,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     --divide-x-reverse: 0;
     border-right-width: calc(4px * var(--divide-x-reverse));
     border-left-width: calc(4px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .sm\:divide-y-6 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(6px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(6px * var(--divide-y-reverse));
+  }
+
+  .sm\:divide-x-6 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(6px * var(--divide-x-reverse));
+    border-left-width: calc(6px * calc(1 - var(--divide-x-reverse)));
   }
 
   .sm\:divide-y-8 > :not(template) ~ :not(template) {
@@ -21571,6 +21720,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   }
 
   .sm\:divide-x > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .sm\:divide-y-DEFAULT > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .sm\:divide-x-DEFAULT > :not(template) ~ :not(template) {
     --divide-x-reverse: 0;
     border-right-width: calc(1px * var(--divide-x-reverse));
     border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
@@ -27553,6 +27714,10 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-radius: 5px;
   }
 
+  .sm\:rounded-6 {
+    border-radius: 6px;
+  }
+
   .sm\:rounded-10 {
     border-radius: 10px;
   }
@@ -27659,6 +27824,26 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   .sm\:rounded-l-5 {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+  }
+
+  .sm\:rounded-t-6 {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .sm\:rounded-r-6 {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .sm\:rounded-b-6 {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .sm\:rounded-l-6 {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   .sm\:rounded-t-10 {
@@ -27947,6 +28132,22 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 
   .sm\:rounded-bl-5 {
     border-bottom-left-radius: 5px;
+  }
+
+  .sm\:rounded-tl-6 {
+    border-top-left-radius: 6px;
+  }
+
+  .sm\:rounded-tr-6 {
+    border-top-right-radius: 6px;
+  }
+
+  .sm\:rounded-br-6 {
+    border-bottom-right-radius: 6px;
+  }
+
+  .sm\:rounded-bl-6 {
+    border-bottom-left-radius: 6px;
   }
 
   .sm\:rounded-tl-10 {
@@ -40955,6 +41156,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-left-width: calc(2px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .md\:divide-y-3 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--divide-y-reverse));
+  }
+
+  .md\:divide-x-3 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .md\:divide-y-4 > :not(template) ~ :not(template) {
     --divide-y-reverse: 0;
     border-top-width: calc(4px * calc(1 - var(--divide-y-reverse)));
@@ -40965,6 +41178,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     --divide-x-reverse: 0;
     border-right-width: calc(4px * var(--divide-x-reverse));
     border-left-width: calc(4px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .md\:divide-y-6 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(6px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(6px * var(--divide-y-reverse));
+  }
+
+  .md\:divide-x-6 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(6px * var(--divide-x-reverse));
+    border-left-width: calc(6px * calc(1 - var(--divide-x-reverse)));
   }
 
   .md\:divide-y-8 > :not(template) ~ :not(template) {
@@ -40986,6 +41211,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   }
 
   .md\:divide-x > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .md\:divide-y-DEFAULT > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .md\:divide-x-DEFAULT > :not(template) ~ :not(template) {
     --divide-x-reverse: 0;
     border-right-width: calc(1px * var(--divide-x-reverse));
     border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
@@ -46968,6 +47205,10 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-radius: 5px;
   }
 
+  .md\:rounded-6 {
+    border-radius: 6px;
+  }
+
   .md\:rounded-10 {
     border-radius: 10px;
   }
@@ -47074,6 +47315,26 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   .md\:rounded-l-5 {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+  }
+
+  .md\:rounded-t-6 {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .md\:rounded-r-6 {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .md\:rounded-b-6 {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .md\:rounded-l-6 {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   .md\:rounded-t-10 {
@@ -47362,6 +47623,22 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 
   .md\:rounded-bl-5 {
     border-bottom-left-radius: 5px;
+  }
+
+  .md\:rounded-tl-6 {
+    border-top-left-radius: 6px;
+  }
+
+  .md\:rounded-tr-6 {
+    border-top-right-radius: 6px;
+  }
+
+  .md\:rounded-br-6 {
+    border-bottom-right-radius: 6px;
+  }
+
+  .md\:rounded-bl-6 {
+    border-bottom-left-radius: 6px;
   }
 
   .md\:rounded-tl-10 {
@@ -60370,6 +60647,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-left-width: calc(2px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .lg\:divide-y-3 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--divide-y-reverse));
+  }
+
+  .lg\:divide-x-3 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .lg\:divide-y-4 > :not(template) ~ :not(template) {
     --divide-y-reverse: 0;
     border-top-width: calc(4px * calc(1 - var(--divide-y-reverse)));
@@ -60380,6 +60669,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     --divide-x-reverse: 0;
     border-right-width: calc(4px * var(--divide-x-reverse));
     border-left-width: calc(4px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .lg\:divide-y-6 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(6px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(6px * var(--divide-y-reverse));
+  }
+
+  .lg\:divide-x-6 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(6px * var(--divide-x-reverse));
+    border-left-width: calc(6px * calc(1 - var(--divide-x-reverse)));
   }
 
   .lg\:divide-y-8 > :not(template) ~ :not(template) {
@@ -60401,6 +60702,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   }
 
   .lg\:divide-x > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .lg\:divide-y-DEFAULT > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .lg\:divide-x-DEFAULT > :not(template) ~ :not(template) {
     --divide-x-reverse: 0;
     border-right-width: calc(1px * var(--divide-x-reverse));
     border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
@@ -66383,6 +66696,10 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-radius: 5px;
   }
 
+  .lg\:rounded-6 {
+    border-radius: 6px;
+  }
+
   .lg\:rounded-10 {
     border-radius: 10px;
   }
@@ -66489,6 +66806,26 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   .lg\:rounded-l-5 {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+  }
+
+  .lg\:rounded-t-6 {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .lg\:rounded-r-6 {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .lg\:rounded-b-6 {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .lg\:rounded-l-6 {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   .lg\:rounded-t-10 {
@@ -66777,6 +67114,22 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 
   .lg\:rounded-bl-5 {
     border-bottom-left-radius: 5px;
+  }
+
+  .lg\:rounded-tl-6 {
+    border-top-left-radius: 6px;
+  }
+
+  .lg\:rounded-tr-6 {
+    border-top-right-radius: 6px;
+  }
+
+  .lg\:rounded-br-6 {
+    border-bottom-right-radius: 6px;
+  }
+
+  .lg\:rounded-bl-6 {
+    border-bottom-left-radius: 6px;
   }
 
   .lg\:rounded-tl-10 {
@@ -79785,6 +80138,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-left-width: calc(2px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .xl\:divide-y-3 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--divide-y-reverse));
+  }
+
+  .xl\:divide-x-3 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .xl\:divide-y-4 > :not(template) ~ :not(template) {
     --divide-y-reverse: 0;
     border-top-width: calc(4px * calc(1 - var(--divide-y-reverse)));
@@ -79795,6 +80160,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     --divide-x-reverse: 0;
     border-right-width: calc(4px * var(--divide-x-reverse));
     border-left-width: calc(4px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .xl\:divide-y-6 > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(6px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(6px * var(--divide-y-reverse));
+  }
+
+  .xl\:divide-x-6 > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(6px * var(--divide-x-reverse));
+    border-left-width: calc(6px * calc(1 - var(--divide-x-reverse)));
   }
 
   .xl\:divide-y-8 > :not(template) ~ :not(template) {
@@ -79816,6 +80193,18 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   }
 
   .xl\:divide-x > :not(template) ~ :not(template) {
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .xl\:divide-y-DEFAULT > :not(template) ~ :not(template) {
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .xl\:divide-x-DEFAULT > :not(template) ~ :not(template) {
     --divide-x-reverse: 0;
     border-right-width: calc(1px * var(--divide-x-reverse));
     border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
@@ -85798,6 +86187,10 @@ body.woocommerce-checkout form.woocommerce-cart-form {
     border-radius: 5px;
   }
 
+  .xl\:rounded-6 {
+    border-radius: 6px;
+  }
+
   .xl\:rounded-10 {
     border-radius: 10px;
   }
@@ -85904,6 +86297,26 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   .xl\:rounded-l-5 {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+  }
+
+  .xl\:rounded-t-6 {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .xl\:rounded-r-6 {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .xl\:rounded-b-6 {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .xl\:rounded-l-6 {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   .xl\:rounded-t-10 {
@@ -86192,6 +86605,22 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 
   .xl\:rounded-bl-5 {
     border-bottom-left-radius: 5px;
+  }
+
+  .xl\:rounded-tl-6 {
+    border-top-left-radius: 6px;
+  }
+
+  .xl\:rounded-tr-6 {
+    border-top-right-radius: 6px;
+  }
+
+  .xl\:rounded-br-6 {
+    border-bottom-right-radius: 6px;
+  }
+
+  .xl\:rounded-bl-6 {
+    border-bottom-left-radius: 6px;
   }
 
   .xl\:rounded-tl-10 {
