@@ -126,7 +126,7 @@ Header
 }
 
 .woocommerce-mini-cart__buttons a.checkout {
-  @apply inline-block text-center leading-12 h-12 px-10 text-lg bg-orange-500 rounded-5 text-white uppercase;
+  @apply inline-block text-center leading-12 h-12 px-10 text-sm font-bold bg-orange-500 rounded-5 text-white uppercase;
 }
 
 

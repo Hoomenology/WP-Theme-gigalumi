@@ -20310,7 +20310,8 @@ Header
   height: 3rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 700;
   --bg-opacity: 1;
   background-color: #de6800;
   background-color: rgba(222, 104, 0, var(--bg-opacity));
