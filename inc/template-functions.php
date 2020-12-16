@@ -65,7 +65,7 @@ function gigalumi_nav_container() {
             <div class="container">
                 <ul id="mega-menu-primary" class="nav-bar flex flex-row items-center justify-between h-15 ">
                     <li class="nav-bar-item" id="mega-menu-item-252" onmouseover="menu_link_over(this);">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="http://local.gigalumi.com/shop/" aria-haspopup="true" aria-expanded="false" tabindex="0">Shop<span class="mega-indicator"></span></a>
+                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/shop" aria-haspopup="true" aria-expanded="false" tabindex="0">Shop<span class="mega-indicator"></span></a>
                         <div class="sub-menu z-100 absolute hidden w-full border-t border-gray-800"  onmouseleave="menu_link_leave(this);">
                             <div class="container">
                                 <div class="shop-navigation flex flex-row bg-white p-10">
