@@ -22,7 +22,7 @@ input {
 	padding: 0;
 }
 
-input:focus, textarea:focus {
+a, a:focus, button:focus, input:focus, textarea:focus {
 	outline: none;
 }
 
@@ -51,6 +51,10 @@ Header
 
 .site-header {
   height: 100px;
+}
+
+.woocommerce-checkout .site-header {
+  @apply bg-gray-200;
 }
 
 .site-branding img {
@@ -242,24 +246,61 @@ a.woocommerce-loop-product__link:hover {
 }
 
 .product-action a.quick_view {
-  @apply bg-white border border-gray-500 rounded-3 text-black h-full;
+  @apply bg-white border border-gray-500 rounded-3 text-black h-full mx-0;
 }
 
 .product-action a.quick_view:hover {
-  @apply text-green-200;
+  @apply text-green-200 bg-white border-gray-500;
 }
 
 .product-action a.quick_view svg {
   @apply inline-block w-6 h-6 mx-2;
 }
 
-.product-action .add_to_cart_button {
+.product-action .button {
   @apply bg-white border border-gray-500 rounded-3 mr-15 ml-3 h-full pt-2 pb-3;
 }
 
-.product-action .add_to_cart_button:hover {
+.product-action .button:hover {
   @apply bg-orange-700 text-white border-orange-700;
 }
+
+.products .product.outofstock::before {
+  @apply bg-gray-600 w-16 h-16 absolute text-white rounded-full text-lg text-center font-bold leading-5;
+  content: 'SOLD OUT';
+  top: 7px;
+  left: 7px;
+  /* display: block; */
+  border: 1px dashed;
+  box-shadow: 0px 0px 0px 7px #a0a0a0;
+  transform: rotate(-45deg);
+  padding-left: 1px;
+  padding-top: 12px;
+}
+
+.onsale {
+  @apply border-none absolute text-lg font-bold text-white;
+  top: 11px;
+  left: -16px;
+  transform: rotate(-45deg);
+  padding: 0 19px;
+}
+
+.onsale::before {
+  z-index: -1;
+  top: -69px;
+  left: -10px;
+  position: absolute;
+  width: 106px;
+  height: 100px;
+  border-width: 27px;
+  border-style: solid;
+  border-color: transparent transparent #c92024 transparent;
+  content: '';
+}
+
+
+
 
 /*
 Single-product
@@ -318,8 +359,20 @@ Single-product
   @apply bg-orange-500 text-white;
 }
 
+.single-product .single_add_to_cart_button.disabled {
+  @apply border-gray-600 text-gray-600 cursor-not-allowed;
+}
+
+.single-product .single_add_to_cart_button.disabled:hover {
+  @apply bg-white text-gray-600;
+}
+
 .cart .pisol_single_buy_now {
   @apply border border-solid border-orange-500 bg-orange-500 text-white rounded-3 h-12 px-15 ml-3;
+}
+
+.cart .pisol_single_buy_now:disabled {
+  @apply cursor-not-allowed; 
 }
 
 .cart .pisol_single_buy_now:hover {

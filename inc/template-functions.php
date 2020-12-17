@@ -3,16 +3,16 @@
 function gigalumi_header_container() {
     ?>
 
-    <div class="container flex flex-row items-center">
+    <div class="container flex flex-row items-center text-black">
         <div class="header-branding flex-1 flex items-center">
             <a href="/" rel="home"><img class="h-15" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo.png" alt=""></a>
         </div>
+        <?php if ( ! is_checkout() ) {?>
         <div class="header-search flex-1 flex items-center">
             <form role="search" method="get" class="w-full m-0" action="/">
                 <label for="search-field" class="flex flex-row items-center bg-gray-100 border rounded-5 border-gray-300 h-12 px-3">
                     <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" required value="" name="s">
-                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg></button>
                 </label>
                 <input type="hidden" name="post_type" value="product">
@@ -41,7 +41,11 @@ function gigalumi_header_container() {
                     </div>
                 </a>
                 <div class="cart relative">
-                    <a href="/cart" class="flex flex-row items-center ml-5 " onmouseover="header_cart_over(this);" >
+                    <a href="/cart" class="flex flex-row items-center ml-5 " 
+                    <?php if ( ! ( is_cart() || is_checkout() ) ) {?>
+                    onmouseover="header_cart_over(this);" 
+                    <?php }?>
+                    >
                         <svg class="h-8 w-8 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>CART ( <?php echo WC()->cart->get_cart_contents_count(); ?> )
@@ -54,6 +58,24 @@ function gigalumi_header_container() {
                 </div>
             </div>
         </div>
+        <?php } else {?>
+        <div class="header-action flex-1 divide-x flex flex-row items-center text-xs font-semibold ">
+            <div class="account flex flex-row items-center justify-end w-full">
+                <div class="flex flex-row items-center">
+                    <svg class="h-9 w-9 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>SECURE CHECKOUT
+                </div>
+                <div class="cart relative">
+                    <a href="/cart" class="flex flex-row items-center ml-5 ">
+                        <svg class="h-8 w-8 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>BACK TO CART
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php }?>
     </div>
     <hr>
     <?php
