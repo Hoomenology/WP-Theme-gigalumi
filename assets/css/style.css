@@ -226,7 +226,7 @@ li.product .woocommerce-LoopProduct-link .star-rating {
 }
 
 .products .product {
-  @apply p-5 bg-gray-100;
+  @apply p-5 bg-gray-100 overflow-hidden;
 }
 
 a.woocommerce-loop-product__link:hover {
@@ -307,19 +307,23 @@ Single-product
 
 */
 
-.single-product div.product .product_title {
+/* .single-product div.product .product_title { */
+div.product .product_title {
   @apply text-3xl leading-15 py-10 px-0 font-bold;
 }
 
-.single-product div.product .woocommerce-product-rating {
+/* .single-product div.product .woocommerce-product-rating { */
+div.product .woocommerce-product-rating {
   @apply mb-20 -mt-32;
 }
 
-.single-product div.product .price {
+/* .single-product div.product .price { */
+div.product .price {
   @apply text-3xl text-red-100 mb-5;
 }
 
-.single-product div.product #pa_color {
+/* .single-product div.product #pa_color { */
+div.product #pa_color {
   @apply border border-gray-300 p-2;
 }
 
@@ -351,19 +355,23 @@ Single-product
   @apply cursor-not-allowed text-gray-600;
 }
 
-.single-product .single_add_to_cart_button {
+/* .single-product .single_add_to_cart_button { */
+.single_add_to_cart_button {
   @apply border border-solid border-orange-500 text-orange-500 rounded-3 h-12 px-15;
 }
 
-.single-product .single_add_to_cart_button:hover {
+/* .single-product .single_add_to_cart_button:hover { */
+.single_add_to_cart_button:hover {
   @apply bg-orange-500 text-white;
 }
 
-.single-product .single_add_to_cart_button.disabled {
+/* .single-product .single_add_to_cart_button.disabled { */
+.single_add_to_cart_button.disabled {
   @apply border-gray-600 text-gray-600 cursor-not-allowed;
 }
 
-.single-product .single_add_to_cart_button.disabled:hover {
+/* .single-product .single_add_to_cart_button.disabled:hover { */
+.single_add_to_cart_button.disabled:hover {
   @apply bg-white text-gray-600;
 }
 
@@ -406,6 +414,12 @@ Single-product
 .qe-toggle-content table tr td:first-child {
   @apply bg-gray-100;
 }
+
+/**
+Quick View
+*/
+
+
 
 
 /*
@@ -557,19 +571,19 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 My Account
 */
 
-#customer_login .input-text {
+.woocommerce-form-login .input-text, .woocommerce-form-register .input-text {
   @apply border-2 border-solid border-gray-300 rounded-3 p-3;
 }
 
-#customer_login p {
+.woocommerce-form p {
   @apply my-2;
 }
 
-#customer_login .woocommerce-form-login__rememberme {
+.woocommerce-form-login .woocommerce-form-login__rememberme {
   @apply my-3;
 }
 
-#customer_login .woocommerce-form-login__submit {
+.woocommerce-form-login .woocommerce-form-login__submit {
   @apply rounded-6 bg-green-200 py-3 px-24 text-white uppercase font-bold;
 }
 
@@ -577,7 +591,7 @@ My Account
   @apply my-5;
 }
 
-#customer_login .woocommerce-form-register__submit {
+.woocommerce-form-register .woocommerce-form-register__submit {
   @apply rounded-6 border border-solid border-black text-black py-3 px-24 uppercase font-bold ;
 }
 
