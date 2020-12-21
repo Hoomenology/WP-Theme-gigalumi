@@ -20595,8 +20595,6 @@ Single-product
 
 */
 
-/* .single-product div.product .product_title { */
-
 div.product .product_title {
   font-size: 30px;
   line-height: 3.75rem;
@@ -20607,14 +20605,10 @@ div.product .product_title {
   font-weight: 700;
 }
 
-/* .single-product div.product .woocommerce-product-rating { */
-
 div.product .woocommerce-product-rating {
   margin-bottom: 5rem;
   margin-top: -8rem;
 }
-
-/* .single-product div.product .price { */
 
 div.product .price {
   font-size: 30px;
@@ -20623,8 +20617,6 @@ div.product .price {
   color: rgba(202, 21, 21, var(--text-opacity));
   margin-bottom: 1.25rem;
 }
-
-/* .single-product div.product #pa_color { */
 
 div.product #pa_color {
   border-width: 1px;
@@ -20694,8 +20686,6 @@ div.product #pa_color {
   color: rgba(160, 160, 160, var(--text-opacity));
 }
 
-/* .single-product .single_add_to_cart_button { */
-
 .single_add_to_cart_button {
   border-width: 1px;
   border-style: solid;
@@ -20711,8 +20701,6 @@ div.product #pa_color {
   padding-right: 3.75rem;
 }
 
-/* .single-product .single_add_to_cart_button:hover { */
-
 .single_add_to_cart_button:hover {
   --bg-opacity: 1;
   background-color: #de6800;
@@ -20721,8 +20709,6 @@ div.product #pa_color {
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
 }
-
-/* .single-product .single_add_to_cart_button.disabled { */
 
 .single_add_to_cart_button.disabled {
   --border-opacity: 1;
@@ -20733,8 +20719,6 @@ div.product #pa_color {
   color: rgba(160, 160, 160, var(--text-opacity));
   cursor: not-allowed;
 }
-
-/* .single-product .single_add_to_cart_button.disabled:hover { */
 
 .single_add_to_cart_button.disabled:hover {
   --bg-opacity: 1;
@@ -20819,9 +20803,128 @@ div.product #pa_color {
   background-color: rgba(249, 249, 249, var(--bg-opacity));
 }
 
-/**
-Quick View
-*/
+.cr-ajax-reviews-cus-images-title {
+  font-size: 24px;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.cr-ajax-reviews-cus-images-div2 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.cr-ajax-reviews-cus-images-div2 .iv-comment-image-top {
+  margin: 0.5rem;
+}
+
+.cr-ajax-reviews-cus-images-div2 .iv-comment-image-top img {
+  border-radius: 5px;
+}
+
+.ivole-summaryBox {
+  display: flex;
+}
+
+#ivole-histogramTable {
+  width: 50%;
+}
+
+.ivole-summaryBox .ivole-product-rating {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ivole-product-rating .rating {
+  display: flex;
+  align-items: center;
+}
+
+.ivole-product-rating .rating .rating-average {
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.ivole-product-rating .star-rating {
+  font-size: 24px;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.woocommerce-tabs ul.tabs {
+  display: none;
+}
+
+#comments .cr-ajax-reviews-add-review {
+  border-width: 1px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #de6800;
+  border-color: rgba(222, 104, 0, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  font-size: 18px;
+  --text-opacity: 1;
+  color: #de6800;
+  color: rgba(222, 104, 0, var(--text-opacity));
+  border-radius: 3px;
+  height: 3rem;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
+
+#comments .cr-ajax-reviews-add-review:hover {
+  --bg-opacity: 1;
+  background-color: #de6800;
+  background-color: rgba(222, 104, 0, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+#respond {
+  --bg-opacity: 1;
+  background-color: #f2f2f2;
+  background-color: rgba(242, 242, 242, var(--bg-opacity));
+}
+
+#respond #submit {
+  border-width: 1px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #de6800;
+  border-color: rgba(222, 104, 0, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #de6800;
+  background-color: rgba(222, 104, 0, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border-radius: 3px;
+  height: 3rem;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  margin-left: 0.75rem;
+}
+
+#respond #submit:hover {
+  --border-opacity: 1;
+  border-color: #de6800;
+  border-color: rgba(222, 104, 0, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #de6800;
+  background-color: rgba(222, 104, 0, var(--bg-opacity));
+}
 
 /*
 Cart

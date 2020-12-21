@@ -307,22 +307,18 @@ Single-product
 
 */
 
-/* .single-product div.product .product_title { */
 div.product .product_title {
   @apply text-3xl leading-15 py-10 px-0 font-bold;
 }
 
-/* .single-product div.product .woocommerce-product-rating { */
 div.product .woocommerce-product-rating {
   @apply mb-20 -mt-32;
 }
 
-/* .single-product div.product .price { */
 div.product .price {
   @apply text-3xl text-red-100 mb-5;
 }
 
-/* .single-product div.product #pa_color { */
 div.product #pa_color {
   @apply border border-gray-300 p-2;
 }
@@ -355,22 +351,18 @@ div.product #pa_color {
   @apply cursor-not-allowed text-gray-600;
 }
 
-/* .single-product .single_add_to_cart_button { */
 .single_add_to_cart_button {
   @apply border border-solid border-orange-500 text-orange-500 rounded-3 h-12 px-15;
 }
 
-/* .single-product .single_add_to_cart_button:hover { */
 .single_add_to_cart_button:hover {
   @apply bg-orange-500 text-white;
 }
 
-/* .single-product .single_add_to_cart_button.disabled { */
 .single_add_to_cart_button.disabled {
   @apply border-gray-600 text-gray-600 cursor-not-allowed;
 }
 
-/* .single-product .single_add_to_cart_button.disabled:hover { */
 .single_add_to_cart_button.disabled:hover {
   @apply bg-white text-gray-600;
 }
@@ -415,10 +407,72 @@ div.product #pa_color {
   @apply bg-gray-100;
 }
 
-/**
-Quick View
-*/
+.cr-ajax-reviews-cus-images-title {
+  @apply text-xl text-black font-bold my-5;
+}
 
+.cr-ajax-reviews-cus-images-div2 {
+  @apply my-5;
+}
+
+.cr-ajax-reviews-cus-images-div2 .iv-comment-image-top {
+  @apply m-2;
+}
+
+.cr-ajax-reviews-cus-images-div2 .iv-comment-image-top img {
+  @apply rounded-5;
+}
+
+.ivole-summaryBox {
+  @apply flex ;
+}
+
+#ivole-histogramTable {
+  @apply w-1/2;
+}
+
+.ivole-summaryBox .ivole-product-rating {
+  @apply w-1/2 flex flex-col justify-center;
+}
+
+.ivole-product-rating .rating {
+  @apply flex items-center;
+}
+
+.ivole-product-rating .rating .rating-average {
+  @apply text-black text-3xl font-bold;
+}
+
+.ivole-product-rating .star-rating {
+  @apply text-xl mx-5;
+}
+
+.woocommerce-tabs ul.tabs {
+  @apply hidden;
+}
+
+#comments .cr-ajax-reviews-add-review {
+  @apply border border-solid border-orange-500 bg-white text-sm text-orange-500 rounded-3 h-12 px-15;  
+}
+
+#comments .cr-ajax-reviews-add-review:hover {
+  @apply bg-orange-500 text-white;  
+}
+
+
+
+
+#respond {
+  @apply bg-gray-200 ;
+}
+
+#respond #submit {
+  @apply border border-solid border-orange-500 bg-orange-500 text-white rounded-3 h-12 px-15 ml-3; 
+}
+
+#respond #submit:hover {
+  @apply border-orange-500 bg-orange-500 ;
+}
 
 
 
