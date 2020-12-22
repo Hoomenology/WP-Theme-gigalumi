@@ -56,3 +56,12 @@ function header_cart_leave(e) {
   triangle.classList.add('hidden');
   cart.className += ' hidden';
 }
+
+
+function click_show_content(e) {
+  let target = document.querySelector(e.dataset.target);
+  e.parentNode.parentNode.querySelector('li a.active').classList.remove('active');
+  e.classList.add('active');
+  target.parentNode.querySelector('li:not(.hidden)').classList.add('hidden');
+  target.classList.remove('hidden');
+}

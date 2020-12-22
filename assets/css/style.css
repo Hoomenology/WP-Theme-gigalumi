@@ -34,9 +34,18 @@ h2 {
   @apply text-xl;
 }
 
+h5 {
+  @apply text-lg;
+}
+
 h1.entry-title {
   @apply py-10;
 }
+
+.active {
+  @apply text-green-200;
+}
+
 /*
 Header
 */

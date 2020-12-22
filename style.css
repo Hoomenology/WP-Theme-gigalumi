@@ -20173,9 +20173,19 @@ h2 {
   font-size: 24px;
 }
 
+h5 {
+  font-size: 20px;
+}
+
 h1.entry-title {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.active {
+  --text-opacity: 1;
+  color: #206a5d;
+  color: rgba(32, 106, 93, var(--text-opacity));
 }
 
 /*
