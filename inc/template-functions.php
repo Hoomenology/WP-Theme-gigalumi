@@ -5,7 +5,7 @@ function gigalumi_header_container() {
 
     <div class="container flex flex-row items-center text-black">
         <div class="header-branding flex-1 flex items-center">
-            <a href="/" rel="home"><img class="h-15" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo.png" alt=""></a>
+            <a href="/" rel="home"><img class="h-15" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo.webp" alt=""></a>
         </div>
         <?php if ( ! is_checkout() ) {?>
         <div class="header-search flex-1 flex items-center">
@@ -238,7 +238,7 @@ function gigalumi_nav_container() {
                                         </li>
                                     </ul>
                                     <div class="flex flex-col items-center ml-9">
-                                        <img class="max-w-none w-75" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/shop-nav-img.png" alt="">
+                                        <img class="max-w-none w-75" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/shop-nav-img.webp" alt="">
                                         <a class="my-10 text-xl text-green-200 flex" href="">NEW ARRIVALS<svg class="w-8 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                             </svg>
@@ -356,7 +356,7 @@ function gigalumi_customer_service_container() {
 }
 
 function gigalumi_about_container() {
-    
+
 }
 
 function gigalumi_footer_container() {

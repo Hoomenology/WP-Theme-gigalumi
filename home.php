@@ -118,10 +118,10 @@
             <div class="description">Our official website is still under construction.<br/>See you soon! </div>
         </div>
         <div class="left">Follow us to updated!<br>
-            <a href="https://www.pinterest.com/gigalumi/"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/pinterest@2x.png" class="icon"></a>
-            <a href="https://www.linkedin.com/company/gigalumi-lighting"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/linked-in@2x.png" class="icon"></a>
-            <a href="https://www.instagram.com/gigalumi_/"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/instagram@2x.png" class="icon"></a>
-            <a href="https://www.facebook.com/Gigalumi.Official"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/fb@2x.png" class="icon"></a>
+            <a href="https://www.pinterest.com/gigalumi/"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/pinterest@2x.webp" class="icon"></a>
+            <a href="https://www.linkedin.com/company/gigalumi-lighting"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/linked-in@2x.webp" class="icon"></a>
+            <a href="https://www.instagram.com/gigalumi_/"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/instagram@2x.webp" class="icon"></a>
+            <a href="https://www.facebook.com/Gigalumi.Official"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/fb@2x.webp" class="icon"></a>
         </div>
         <div class="right">If you want to purchase Gigalumi online, please feel free to shop at Amazon.com.<br>
             <a href="https://www.amazon.com/stores/GIGALUMI/page/2CBF7A80-E273-46B7-8320-6E3678CCC94F" class="web">Here's our official shop on Amazon!</a>
