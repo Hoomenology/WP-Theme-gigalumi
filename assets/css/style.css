@@ -26,16 +26,32 @@ a, a:focus, button:focus, input:focus, textarea:focus {
 	outline: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply text-black;
+}
+
 h1 {
   @apply text-4xl;
 }
 
 h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
   @apply text-xl;
 }
 
 h5 {
   @apply text-lg;
+}
+
+h6 {
+  @apply text-sm;
 }
 
 h1.entry-title {
@@ -44,6 +60,18 @@ h1.entry-title {
 
 .active {
   @apply text-green-200;
+}
+
+body.page-template-default .entry-content p {
+  @apply mb-6;
+}
+
+body.page-template-default .entry-header h1 {
+  @apply uppercase;
+}
+
+body.page-template-default .entry-content h5 {
+  @apply mb-6;
 }
 
 /*
@@ -703,4 +731,29 @@ body.logged-in.woocommerce-account #content {
 
 .woocommerce-MyAccount-content .woocommerce-EditAccountForm button[type="submit"] {
   @apply rounded-10 bg-green-300 py-4 px-12 text-white font-bold;
+}
+
+/**
+  Page
+*/
+
+.about-how .how-inner img {
+  box-shadow: -10px 10px 0 5px #eeeeee;
+}
+
+.about-families .families-inner {
+  background-image: url('assets/images/about-families.webp');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.why-inner h1::before, .how-inner h2::before {
+  @apply absolute font-black text-green-200 ;
+  font-size: 100px;
+  content: '‘';
+  left: -50px;
+  line-height: 0.7;
+  font-family: Arial;
 }

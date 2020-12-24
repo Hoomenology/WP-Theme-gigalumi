@@ -25,6 +25,7 @@ add_action( 'gigalumi_nav', 'gigalumi_nav_container', 0 );
  */
 
 add_action( 'gigalumi_customer_service', 'gigalumi_customer_service_container', 0 );
+add_action( 'gigalumi_about', 'gigalumi_about_container', 0 );
 
 
 /**

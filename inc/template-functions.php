@@ -355,6 +355,9 @@ function gigalumi_customer_service_container() {
     <?php
 }
 
+function gigalumi_about_container() {
+    
+}
 
 function gigalumi_footer_container() {
     if ( ! is_checkout()) {

@@ -27,7 +27,7 @@
 <div id="page" class="hfeed site">
     <?php do_action( 'storefront_before_header' ); ?>
     
-    <?php if ( ! is_checkout() ) { ?>
+    <?php if ( ! is_checkout() ) : ?>
     <div class="announcement-bar">
         <div class="container">
             <div class="announcement-bar-inner">
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <?php } ?>
+    <?php endif; ?>
 
 	<header id="masthead" class="site-header flex items-center" role="banner" style="<?php storefront_header_styles(); ?>">
 
@@ -60,7 +60,8 @@
 	 * @hooked storefront_header_widget_region - 10
 	 * @hooked woocommerce_breadcrumb - 10
 	 */
-    if ( ! is_checkout() && ! is_account_page()) {
+    global $no_breadcrumb;
+    if ( ! is_checkout() && ! is_account_page() && empty($no_breadcrumb)) {
         do_action( 'storefront_before_content' );
     }
 	?>

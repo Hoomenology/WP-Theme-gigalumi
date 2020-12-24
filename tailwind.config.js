@@ -51,6 +51,7 @@ module.exports = {
         '16': '4rem',
         '20': '5rem',
         '24': '6rem',
+        '30': '7.5rem',
         '32': '8rem',
         '34': '8.5rem',
         '40': '10rem',
@@ -58,6 +59,7 @@ module.exports = {
         '56': '14rem',
         '64': '16rem',
         '75': '18.75rem',
+        '115': '28.75rem',
       },
       lineHeight: {
         '12': '3rem',
@@ -81,7 +83,8 @@ module.exports = {
         },
         yellow: {
           '100': '#ffec94',
-          '200': '#ff9100'
+          '200': '#ff9100',
+          '300': '#fcac36'
         },
         orange: {
           '100': '#faf9f7',
