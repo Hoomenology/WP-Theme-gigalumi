@@ -102024,3 +102024,32 @@ body.logged-in.woocommerce-account #content {
             animation: bounce 1s infinite;
   }
 }
+
+.static-page h1 {
+  font-family: Avenir;
+    margin: 1.5rem 0;
+    font-weight: 800;
+}
+
+.static-page h4 {
+  margin: 2rem 0 1.5rem !important;
+  font-weight: 600;
+}
+
+.static-page p {
+  margin-bottom: 1.5rem;
+}
+
+.static-page ul {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+.static-page ul ul {
+  list-style: circle;
+}
+
+.static-page a {
+  color: #206a5d;
+  border-bottom: 1px solid #206a5d;
+}
