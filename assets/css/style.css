@@ -757,3 +757,30 @@ body.logged-in.woocommerce-account #content {
   line-height: 0.7;
   font-family: Arial;
 }
+
+
+.static-page h1 {
+  @apply my-6 font-extrabold;
+}
+
+.static-page h4 {
+  margin: 2rem 0 1.5rem !important;
+  font-weight: 600;
+}
+
+.static-page p {
+  @apply mb-6;
+}
+
+.static-page ul {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+.static-page ul ul {
+  list-style: circle;
+}
+
+.static-page a {
+  @apply text-green-200 border border-solid border-green-200;
+}
