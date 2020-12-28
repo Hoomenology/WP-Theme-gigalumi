@@ -16,19 +16,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-        <?php
-            // do_action( 'storefront_page_before' );
-
-            do_action( 'gigalumi_about' );
-
-            /**
-             * Functions hooked in to storefront_page_after action
-             *
-             * @hooked storefront_display_comments - 10
-             */
-            do_action( 'storefront_page_after' );
-
-        ?>
         <div class="about-banner bg-black w-screen">
             <div class="container">
                 <div class="banner-inner relative">

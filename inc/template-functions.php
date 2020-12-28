@@ -261,7 +261,7 @@ function gigalumi_nav_container() {
                         <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Deck Lights & Others</a>
                     </li>
                     <li class="text-red-200 nav-bar-item " id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">SALE</a>
+                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/shop/?pr_onsale=1" tabindex="0">SALE</a>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
                         <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Get Inspired</a>
@@ -355,14 +355,13 @@ function gigalumi_customer_service_container() {
     <?php
 }
 
-function gigalumi_about_container() {
 
-}
 
 function gigalumi_footer_container() {
     if ( ! is_checkout()) {
     ?>
-    <div class="footer-shop-info container flex justify-around items-center h-24 text-base text-black ">
+    <?php if ( !is_home() ) : ?>
+    <div class="shop-info container flex justify-around items-center h-24 text-base text-black ">
         <div class="shop-info-item flex items-center">
             <svg class="w-10 h-10 mx-5 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor"><path fill="#fff" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
            <p>Free Shipping on Orders Over $99</p>
@@ -384,6 +383,7 @@ function gigalumi_footer_container() {
             <p>Returns & Exchange within 30 days</p>
         </div>
     </div>
+    <?php endif;?>
     <div class="footer-block border-t border-green-200">
         <div class="container">
             <div class="footer-block-inner flex flex-row justify-between my-12 ">
