@@ -793,14 +793,14 @@ body.logged-in.woocommerce-account #content {
 }
 
 .home-banner {
-  background-image: url('assets/images/home-banner.png');
+  background-image: url('assets/images/home-banner.webp');
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px; 
 }
 
 .home-slogan {
-  background-image: url('assets/images/home-slogan.png');
+  background-image: url('assets/images/home-slogan.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
