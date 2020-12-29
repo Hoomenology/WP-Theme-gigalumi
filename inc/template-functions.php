@@ -83,14 +83,14 @@ function gigalumi_header_container() {
 
 function gigalumi_nav_container() {
     ?>
-        <nav id="site-navigation" class="border-t border-b border-gray-300 relative" role="navigation" aria-label="Primary Navigation">
+        <nav id="site-navigation" class="border-t border-b border-gray-300 relative bg-white" role="navigation" aria-label="Primary Navigation">
             <div class="container">
-                <ul id="mega-menu-primary" class="nav-bar flex flex-row items-center justify-between h-15 ">
+                <ul id="mega-menu-primary" class="nav-bar flex flex-row items-center justify-between h-15">
                     <li class="nav-bar-item" id="mega-menu-item-252" onmouseover="menu_link_over(this);">
                         <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/shop" aria-haspopup="true" aria-expanded="false" tabindex="0">Shop<span class="mega-indicator"></span></a>
-                        <div class="sub-menu z-100 absolute hidden w-full border-t border-gray-800"  onmouseleave="menu_link_leave(this);">
+                        <div class="sub-menu z-100 absolute hidden w-full"  onmouseleave="menu_link_leave(this);">
                             <div class="container">
-                                <div class="shop-navigation flex flex-row bg-white p-10">
+                                <div class="shop-navigation flex flex-row bg-white p-10 border-t  border-gray-800">
                                     <ul class="nav-grid flex-grow grid grid-cols-3 gap-10 justify-items-center">
                                         <li class="nav-grid-item w-full">
                                             <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
@@ -354,8 +354,6 @@ function gigalumi_customer_service_container() {
     </div>
     <?php
 }
-
-
 
 function gigalumi_footer_container() {
     if ( ! is_checkout()) {

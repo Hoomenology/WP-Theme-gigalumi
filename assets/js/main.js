@@ -1,11 +1,13 @@
 
 function menu_link_over(e) {
-	let arrow = e.querySelector('.sub-menu');
+  let arrow = e.querySelector('.sub-menu');
+  document.querySelector('#site-navigation').classList.add('z-1');
   arrow.classList.remove('hidden');
 }
 
 function menu_link_leave(e) {
   let arrow = e.querySelector('.sub-menu');
+  document.querySelector('#site-navigation').classList.remove('z-1');
   if (arrow) {
     arrow.className += ' hidden';
   } else {
