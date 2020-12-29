@@ -793,10 +793,30 @@ body.logged-in.woocommerce-account #content {
 }
 
 .home-banner {
-  background-image: url('assets/images/home-banner.webp');
+  background-image: url('assets/images/home-banner-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px; 
+  position: relative;
+}
+
+.home-banner::before {
+  content: '';
+  position: absolute;
+  width: calc(50% + 200px);
+  height: 600px;
+  border-top-width: 600px;
+  border-right-width: 400px;
+  border-style: solid;
+  border-color: #1a605f transparent transparent transparent;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.home-banner .banner-off {
+  background-image: url('assets/images/home-banner-off.webp');
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 
 .home-slogan {
