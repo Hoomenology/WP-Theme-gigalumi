@@ -20711,10 +20711,6 @@ h2 {
   font-size: 30px;
 }
 
-h2.section-title {
-  font-size: 36px;
-}
-
 h3 {
   font-size: 28px;
 }
@@ -20734,6 +20730,10 @@ h6 {
 h1.entry-title {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+h2.section-title {
+  font-size: 36px;
 }
 
 .active {
@@ -21988,6 +21988,15 @@ body.logged-in.woocommerce-account #content {
   background-image: url('assets/images/home-slogan.webp');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+li.faq-item:first-child {
+  border-top-width: 1px;
+}
+
+li.faq-item img {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 640px) {

@@ -329,7 +329,7 @@ function gigalumi_customer_service_container() {
             <div class="content pl-8">
                 <ul>
                     <?php for($i = 0; $i < $service_count; $i++): ?> 
-                    <li id="<?php echo $service[$i]['id'];?>" class="<?php echo $i == 0 ? '' : 'hidden'; ?>">
+                    <li id="<?php echo $service[$i]['id'];?>" class="click-item <?php echo $i == 0 ? '' : 'hidden'; ?>">
                         <h5 class="mb-3 font-semibold"><?php echo $service[$i]['title'];?></h5>
                         <div class="leading-12 w-full">
                             <?php echo $service[$i]['content'];?>

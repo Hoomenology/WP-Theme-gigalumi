@@ -62,6 +62,22 @@ function click_show_content(e) {
   let target = document.querySelector(e.dataset.target);
   e.parentNode.parentNode.querySelector('li a.active').classList.remove('active');
   e.classList.add('active');
-  target.parentNode.querySelector('li:not(.hidden)').classList.add('hidden');
+  target.parentNode.querySelector('li.click-item:not(.hidden)').classList.add('hidden');
   target.classList.remove('hidden');
+}
+
+function toggle_faq_content(e) {
+  let status = e.dataset.status;
+  let icon = e.querySelector('i');
+  let content = e.querySelector('.faq-item-content');
+  if (status == 0) {
+    content.classList.remove('hidden');
+    icon.classList.remove('fa-plus');
+    icon.classList.add('fa-minus');
+  } else {
+    content.classList.add('hidden');
+    icon.classList.remove('fa-minus'); 
+    icon.classList.add('fa-plus');
+  }
+  e.dataset.status = status ^ 1;
 }

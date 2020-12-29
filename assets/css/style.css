@@ -38,10 +38,6 @@ h2 {
   @apply text-3xl;
 }
 
-h2.section-title {
-  @apply text-4xl;
-}
-
 h3 {
   @apply text-2xl;
 }
@@ -60,6 +56,10 @@ h6 {
 
 h1.entry-title {
   @apply py-10;
+}
+
+h2.section-title {
+  @apply text-4xl;
 }
 
 .active {
@@ -803,4 +803,12 @@ body.logged-in.woocommerce-account #content {
   background-image: url('assets/images/home-slogan.webp');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+li.faq-item:first-child {
+  @apply border-t;
+}
+
+li.faq-item img {
+  @apply my-2;
 }
