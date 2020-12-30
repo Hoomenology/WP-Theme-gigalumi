@@ -21690,6 +21690,9 @@ a.woocommerce-loop-product__link:hover {
   --text-opacity: 1 !important;
   color: #000 !important;
   color: rgba(0, 0, 0, var(--text-opacity)) !important;
+  --bg-opacity: 1 !important;
+  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, var(--bg-opacity)) !important;
 }
 
 .woocommerce-pagination li .page-numbers.current {

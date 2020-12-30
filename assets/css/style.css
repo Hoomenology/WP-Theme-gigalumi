@@ -373,7 +373,7 @@ a.woocommerce-loop-product__link:hover {
 }
 
 .woocommerce-pagination li .page-numbers {
-  @apply w-12 h-12 font-bold leading-12 text-black !important;
+  @apply w-12 h-12 font-bold leading-12 text-black bg-white !important;
 }
 
 .woocommerce-pagination li .page-numbers.current {
