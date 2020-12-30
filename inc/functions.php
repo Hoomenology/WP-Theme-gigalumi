@@ -123,13 +123,13 @@ function the_gigalumi_register_notice() {
 /**
  * Change number of products that are displayed per page (shop page)
  */
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 100 );
 
-function new_loop_shop_per_page( $cols ) {
+function new_loop_shop_per_page( $per_page ) {
     // $cols contains the current number of products per page based on the value stored on Options –> Reading
     // Return the number of products you wanna show per page.
-    $cols = 1000;
-    return $cols;
+    $per_page = 36;
+    return $per_page;
 }
 
 // add_action( 'rest_api_init', 'register_rest_routes' );

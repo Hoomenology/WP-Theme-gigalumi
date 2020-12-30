@@ -21665,6 +21665,48 @@ a.woocommerce-loop-product__link:hover {
   content: '';
 }
 
+.storefront-sorting .woocommerce-pagination {
+  display: none;
+}
+
+.storefront-sorting:last-child .woocommerce-pagination {
+  display: block;
+}
+
+.storefront-sorting:last-child .woocommerce-ordering, .storefront-sorting:last-child .woocommerce-result-count {
+  display: none !important;
+}
+
+.woocommerce-pagination li .page-numbers {
+  width: 3rem !important;
+  height: 3rem !important;
+  font-weight: 700 !important;
+  line-height: 3rem !important;
+  --text-opacity: 1 !important;
+  color: #000 !important;
+  color: rgba(0, 0, 0, var(--text-opacity)) !important;
+}
+
+.woocommerce-pagination li .page-numbers.current {
+  text-decoration: underline;
+  color: #206a5d !important;
+}
+
+.woocommerce-pagination li a.page-numbers:hover {
+  text-decoration: underline;
+  color: #206a5d !important;
+}
+
+.woocommerce-pagination li .page-numbers.prev, .woocommerce-pagination li .page-numbers.next {
+  border-radius: 999px;
+  background-color: #e6e6e6 !important;
+}
+
+.woocommerce-pagination li .page-numbers.prev:hover, .woocommerce-pagination li .page-numbers.next:hover {
+  color: white !important;
+  background-color: #206a5d !important;
+}
+
 /*
 Single-product
 
