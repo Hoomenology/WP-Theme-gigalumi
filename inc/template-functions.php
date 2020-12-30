@@ -249,25 +249,16 @@ function gigalumi_nav_container() {
                         </div>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Solar Path Lights</a>
+                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/product-category/pathway-lights/" tabindex="0">Solar Path Lights</a>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Solar String Lights</a>
+                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/product-category/string-lights/" tabindex="0">Solar String Lights</a>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Festival Lights</a>
-                    </li>
-                    <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Deck Lights & Others</a>
+                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/product-category/deck-wall-lights/" tabindex="0">Deck Lights & Others</a>
                     </li>
                     <li class="text-red-200 nav-bar-item " id="mega-menu-item-251">
                         <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/shop/?pr_onsale=1" tabindex="0">SALE</a>
-                    </li>
-                    <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Get Inspired</a>
-                    </li>
-                    <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/" tabindex="0">Some Lighting Knowledge</a>
                     </li>
                 </ul>
             </div>
@@ -391,78 +382,66 @@ function gigalumi_footer_container() {
                             <p class="font-bold my-3 text-base">Shop Gigalumi</p>
                             <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">New Arrival</a>
+                                    <a class="map-link hover:text-green-200" href="/shop/?orderby=date">New Arrival</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Path lights</a>
+                                    <a class="map-link hover:text-green-200" href="/product-category/pathway-lights/">Path lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Deck lights</a>
+                                    <a class="map-link hover:text-green-200" href="/product-category/deck-wall-lights/">Deck lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">String lights</a>
+                                    <a class="map-link hover:text-green-200" href="/product-category/string-lights/">String lights</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Festival lights</a>
-                                </li>
-                                <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Weekly Best Sellers</a>
-                                </li>
-                                <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Top Rated Products</a>
+                                    <a class="map-link hover:text-green-200" href="/product-tag/festival-lights/">Festival lights</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="map-item row-span-2">
                             <p class="font-bold my-3 text-base">My Account</p>
                             <ul class="map-item-child ">
-                                <li class="my-4">
+                                <!-- <li class="my-4">
                                     <a class="map-link hover:text-green-200 relative" href="#"><svg class="absolute w-5 h-5 text-yellow-200 -left-8 top-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="currentColor"><path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/></svg> Member Benefits</a>
                                 </li>
                                 <li class="my-4">
                                     <a class="map-link hover:text-green-200 relative" href="#"><svg class="absolute w-5 h-5 text-yellow-200 -left-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="currentColor"><path d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"/></svg> Free Product’s Trail</a>
+                                </li> -->
+                                <li class="my-4">
+                                    <a class="map-link hover:text-green-200" href="my-account/payment-methods/">Billing/Payments</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Billing/Payments</a>
+                                    <a class="map-link hover:text-green-200" href="/my-account/edit-account/">Profile Updated</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Profile Updated</a>
+                                    <a class="map-link hover:text-green-200" href="/my-account/edit-address/">Edit Address</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Edit Address</a>
-                                </li>
-                                <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">My Orders</a>
-                                </li>
-                                <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">My Coupons</a>
+                                    <a class="map-link hover:text-green-200" href="/my-account/orders/">My Orders</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="map-item row-span-2">
-                            <p class="font-bold my-3 text-base">HELP</p>
+                            <p class="font-bold my-3 text-base">NEED HELP?</p>
                             <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#faq/">FAQ</a>
+                                    <a class="map-link hover:text-green-200" href="/faq/">FAQ</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Delivery Times</a>
+                                    <a class="map-link hover:text-green-200" href="/customer-service/">Delivery Times</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Return & Exchange Policy</a>
+                                    <a class="map-link hover:text-green-200" href="/return-exchange-policy/">Return & Exchange Policy</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Warranty Conditions</a>
+                                    <a class="map-link hover:text-green-200" href="/customer-service/">Warranty Conditions</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Contact Us</a>
-                                </li>
-                                <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Extend Warranty</a>
+                                    <a class="map-link hover:text-green-200" href="/customer-service/">Contact Us</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="map-item ">
+                        <!-- <li class="map-item ">
                             <p class="font-bold my-3 text-base">BLOG</p>
                             <ul class="map-item-child ">
                                 <li class="my-4">
@@ -472,18 +451,18 @@ function gigalumi_footer_container() {
                                     <a class="map-link hover:text-green-200" href="#">Knowledge</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="map-item ">
-                            <p class="font-bold my-3 text-base">ABBOUT GIGALUMI</p>
+                            <p class="font-bold my-3 text-base">ABOUT GIGALUMI</p>
                             <ul class="map-item-child ">
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#faq/">About</a>
+                                    <a class="map-link hover:text-green-200" href="/about/">About</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Privacy Policy</a>
+                                    <a class="map-link hover:text-green-200" href="/privacy-policy/">Privacy Policy</a>
                                 </li>
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="#">Terms & Conditions</a>
+                                    <a class="map-link hover:text-green-200" href="/terms-conditions">Terms & Conditions</a>
                                 </li>
                             </ul>
                         </li>
@@ -506,19 +485,19 @@ function gigalumi_footer_container() {
     </div>
     <div class="footer-social flex justify-center">
         <div class="social-icon-list flex flex-row">
-            <a href=""><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="https://www.facebook.com/Gigalumi.Official"><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/>
             </svg></a>
-            <a href=""><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="https://www.instagram.com/gigalumi_/"><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M11.984 16.815c2.596 0 4.706-2.111 4.706-4.707 0-1.409-.623-2.674-1.606-3.538-.346-.303-.735-.556-1.158-.748-.593-.27-1.249-.421-1.941-.421s-1.349.151-1.941.421c-.424.194-.814.447-1.158.749-.985.864-1.608 2.129-1.608 3.538 0 2.595 2.112 4.706 4.706 4.706zm.016-8.184c1.921 0 3.479 1.557 3.479 3.478 0 1.921-1.558 3.479-3.479 3.479s-3.479-1.557-3.479-3.479c0-1.921 1.558-3.478 3.479-3.478zm5.223.369h6.777v10.278c0 2.608-2.114 4.722-4.722 4.722h-14.493c-2.608 0-4.785-2.114-4.785-4.722v-10.278h6.747c-.544.913-.872 1.969-.872 3.109 0 3.374 2.735 6.109 6.109 6.109s6.109-2.735 6.109-6.109c.001-1.14-.327-2.196-.87-3.109zm2.055-9h-12.278v5h-1v-5h-1v5h-1v-4.923c-.346.057-.682.143-1 .27v4.653h-1v-4.102c-1.202.857-2 2.246-2 3.824v3.278h7.473c1.167-1.282 2.798-2 4.511-2 1.722 0 3.351.725 4.511 2h7.505v-3.278c0-2.608-2.114-4.722-4.722-4.722zm2.722 5.265c0 .406-.333.735-.745.735h-2.511c-.411 0-.744-.329-.744-.735v-2.53c0-.406.333-.735.744-.735h2.511c.412 0 .745.329.745.735v2.53z"/>
             </svg></a>
-            <a href=""><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="https://twitter.com/Gigalumi_"><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
             </svg></a>
-            <a href=""><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <!-- <a href=""><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg></a>
-            <a href=""><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            </svg></a> -->
+            <a href="https://www.pinterest.com/gigalumi/"><svg class="m-4 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" fill-rule="evenodd" clip-rule="evenodd"/>
             </svg></a>
         </div>
@@ -529,10 +508,10 @@ function gigalumi_footer_container() {
             <div class="footer-aside-inner flex flex-row justify-between items-center py-2">
                 <div class="footer-info flex flex-col">
                     <div class="footer-info-content flex flex-row text-green-200 mb-2">
-                        <a class=" underline" href="">Cookie Useage</a>
+                        <a class=" underline" href="/privacy-policy/#">Cookie Usage</a>
                         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                        <a class=" underline" href="">Do Not Sell My Personal Information</a>
-                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        <!-- <a class=" underline" href="">Do Not Sell My Personal Information</a>
+                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
                         <a class=" underline" href="">Site Map</a>
                     </div>
                     <p>Copyright © 2020 Gigalumi. All rights reserved.</p>

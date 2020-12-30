@@ -25,22 +25,22 @@ $featured_categories = [
     ],
     [
         'title' => 'For Patio',
-        'url' => '/product-category/home-party',
+        'url' => '/product-tag/patio-decor',
         'img' => 'home-categories-3.webp',
     ],
     [
         'title' => 'Hanging Lights',
-        'url' => '/product-category/home-party',
+        'url' => '/product-category/hanging-lights',
         'img' => 'home-categories-4.webp',
     ],
     [
         'title' => 'Color-changing',
-        'url' => '/product-category/home-party',
+        'url' => '/product-tag/color-changing',
         'img' => 'home-categories-5.webp',
     ],
     [
         'title' => 'For DIY',
-        'url' => '/product-category/home-party',
+        'url' => '/product-tag/for-diy',
         'img' => 'home-categories-6.webp',
     ],
 ];

@@ -22,7 +22,7 @@ input {
 	padding: 0;
 }
 
-a, a:focus, button:focus, input:focus, textarea:focus {
+a, a:focus, button:focus, input:focus, select:focus, textarea:focus {
 	outline: none;
 }
 
@@ -223,14 +223,21 @@ Shop
   @apply my-auto mx-5 inline-block whitespace-no-wrap;
 }
 
-.wpfMainWrapper {
-  /* @apply flex items-start; */
-  @apply text-base;
+.storefront-sorting {
+  @apply text-base text-black;
 }
 
-.wpfCheckboxHier select {
-  @apply border border-gray-200;
-  padding: 0.4rem;
+.storefront-sorting select {
+  @apply border border-gray-500 rounded-3;
+  padding: 0.8rem;
+}
+
+.storefront-sorting select.orderby {
+  @apply rounded-full border-2 border-green-200;
+}
+
+.wpfSlugWrapper {
+  @apply hidden;
 }
 
 .woocommerce-LoopProduct-link .woocommerce-loop-product__title {
@@ -242,7 +249,11 @@ Shop
 }
 
 .woocommerce-LoopProduct-link .price .woocommerce-Price-amount {
-  @apply text-xl font-bold text-orange-300;
+  @apply text-xl font-bold text-orange-500;
+}
+
+.sale .price bdi {
+  @apply text-red-300;
 }
 
 li.product .woocommerce-LoopProduct-link .star-rating {
@@ -282,7 +293,7 @@ a.woocommerce-loop-product__link:hover {
 }
 
 .woocommerce-loop-product__link .woocommerce-loop-product__title {
-  @apply mt-5 mb-4 text-current;
+  @apply mt-5 mb-4 text-base;
 }
 
 .product-action {
@@ -363,7 +374,7 @@ div.product .price {
   @apply text-3xl text-red-100 mb-5;
 }
 
-div.product #pa_color {
+div.product table.variations select {
   @apply border border-gray-300 p-2;
 }
 
@@ -423,6 +434,14 @@ div.product #pa_color {
   @apply border-orange-400 bg-orange-400 ;
 }
 
+.storefront-sticky-add-to-cart__content-button {
+  @apply border border-solid border-orange-500 text-orange-500 text-xl rounded-3 py-2 px-15;
+}
+
+.storefront-sticky-add-to-cart__content-button:hover {
+  @apply bg-orange-500 text-white;
+}
+
 .qae-faqs-container .qe-faqs-filters-container {
   @apply hidden ;
 }
@@ -449,6 +468,10 @@ div.product #pa_color {
 
 .qe-toggle-content table tr td:first-child {
   @apply bg-gray-100;
+}
+
+.qe-faq-toggle.active {
+  @apply text-black;
 }
 
 .cr-ajax-reviews-cus-images-title {
