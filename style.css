@@ -21677,6 +21677,11 @@ a.woocommerce-loop-product__link:hover {
   display: none !important;
 }
 
+.woocommerce-pagination {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .woocommerce-pagination li .page-numbers {
   width: 3rem !important;
   height: 3rem !important;
