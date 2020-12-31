@@ -408,7 +408,7 @@ function gigalumi_footer_container() {
                                     <a class="map-link hover:text-green-200 relative" href="#"><svg class="absolute w-5 h-5 text-yellow-200 -left-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="currentColor"><path d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"/></svg> Free Product’s Trail</a>
                                 </li> -->
                                 <li class="my-4">
-                                    <a class="map-link hover:text-green-200" href="my-account/payment-methods/">Billing/Payments</a>
+                                    <a class="map-link hover:text-green-200" href="/my-account/payment-methods/">Billing/Payments</a>
                                 </li>
                                 <li class="my-4">
                                     <a class="map-link hover:text-green-200" href="/my-account/edit-account/">Profile Updated</a>
