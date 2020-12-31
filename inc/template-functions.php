@@ -477,7 +477,7 @@ function gigalumi_footer_container() {
                     </div>
                     <div class="call-us">
                         <p class="font-semibold">QUESTIONS? FEEDBACK? CALL US AT</p>
-                        <p class="text-xl italic text-green-200 my-3 font-semibold">1-866-471-9811</p>
+                        <p class="text-xl italic text-green-200 my-3 font-semibold">1-888-829-9252</p>
                     </div>
                 </div>
             </div>
