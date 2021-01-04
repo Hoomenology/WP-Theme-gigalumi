@@ -68,7 +68,7 @@ get_header(); ?>
                 </div>
                 <img class="absolute bottom-0 right-0" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-banner-product.webp" alt="">
                 <div class="banner-content flex flex-col h-full justify-center items-left text-white">
-                    <p class="text-5xl font-bold pt-28">WE NOW LAUNCHEND!</p>
+                    <p class="text-5xl font-bold pt-28">WE NOW LAUNCHED!</p>
                     <p class="pb-4 text-3xl leading-10">Our new website is online now, <br/>Come and celebrate with us!</p>
                     <p class="pb-4 text-xl">+ Free delivery over $59</p>
                     <p class="pb-4 text-blue-300">Special Offer Duration: 8 Jan 2021 to 31 Jan 2021</p>
