@@ -47,14 +47,16 @@ $featured_categories = [
 
 $sales_info = [
     [
-        'title' => 'MAKE IT A SPOOKY NIGHT!',
-        'url' => '/shop?pr_onsale=1',
-        'img' => 'home-sales-1.webp'
+        'title' => '<span class="text-3xl">CELEBRATE WITH US!</span><br/>20% OFF <span class="text-xl">ON</span> EVERYTHING!',
+        'url' => '/shop',
+        'img' => 'home-sales-1.webp',
+        'go-title' => 'SHOP ALL PRODUCTS NOW'
     ],
     [
-        'title' => "DISCOVER ALL OF TODAY'S<br/> BEST SAVINGS",
-        'url' => '/shop?pr_onsale=1',
-        'img' => 'home-sales-2.webp'
+        'title' => "COUPON<br/> FOR NEW SIGN UP",
+        'url' => '/my-account',
+        'img' => 'home-sales-2.webp',
+        'go-title' => 'SIGN UP NOW'
     ]
 ];
 
@@ -115,10 +117,10 @@ get_header(); ?>
                             <img class="w-full" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']; ?>" alt="">
                             <div class="absolute top-0 w-full h-full flex justify-center">
                                 <div class=" h-full flex flex-col items-center justify-end">
-                                    <h2 class="section-title text-white font-bold"><?php echo $v['title']; ?></h2>
+                                    <h2 class="section-title text-white font-semibold"><?php echo $v['title']; ?></h2>
                                     <hr class="w-full border-solid border-white opacity-25 mb-2">
                                     <hr class="w-full border-solid border-white opacity-25">
-                                    <a href="<?php echo $v['url']; ?>" class="text-white font-semibold my-5">SHOP NOW >></a>
+                                    <a href="<?php echo $v['url']; ?>" class="text-white font-semibold my-5"><?php echo $v['go-title']; ?> >></a>
                                 </div>
                             </div>
                         </li>
