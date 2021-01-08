@@ -730,7 +730,9 @@ body.woocommerce-checkout form.woocommerce-cart-form {
 My Account
 */
 
-.woocommerce-form-login .input-text, .woocommerce-form-register .input-text {
+.woocommerce-form-login .input-text,
+.woocommerce-form-register .input-text,
+.woocommerce-ResetPassword .input-text{
   @apply border-2 border-solid border-gray-300 rounded-3 p-3;
 }
 
@@ -742,7 +744,8 @@ My Account
   @apply my-3;
 }
 
-.woocommerce-form-login .woocommerce-form-login__submit {
+.woocommerce-form-login .woocommerce-form-login__submit,
+.woocommerce-ResetPassword .woocommerce-Button {
   @apply rounded-6 bg-green-200 py-3 px-24 text-white uppercase font-bold;
 }
 
