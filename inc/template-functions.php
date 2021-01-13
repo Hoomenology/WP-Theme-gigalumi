@@ -211,7 +211,7 @@ function gigalumi_nav_container() {
                                             <ul class="nav-dropdown ">
                                                 <?php foreach($nav['children'] as $nav_child) :?> 
                                                 <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="<?php echo $nav_child['title']; ?>"><?php echo $nav_child['title']; ?></a>
+                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="<?php echo $nav_child['url']; ?>"><?php echo $nav_child['title']; ?></a>
                                                 </li>
                                                 <?php endforeach;?> 
                                             </ul>
