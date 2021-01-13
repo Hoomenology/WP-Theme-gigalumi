@@ -31,7 +31,7 @@
     <div class="announcement-bar">
         <div class="container">
             <div class="announcement-bar-inner">
-                <a href="/shop"> Join and get 10% Off on Your first order <span class="text-yellow-100">Join Us >></span></a>
+                <a href="/shop"> Up to 50% OFF for New Website Launch | <span class="text-yellow-100">Shop Now →</span></a>
             </div>
         </div>
     </div>

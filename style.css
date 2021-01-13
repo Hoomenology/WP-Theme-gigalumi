@@ -919,10 +919,6 @@ img {
   height: 3rem;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-15 {
   height: 3.75rem;
 }
@@ -1256,11 +1252,6 @@ img {
   padding-bottom: 0.5rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1574,8 +1565,8 @@ img {
   width: 8.5rem;
 }
 
-.w-40 {
-  width: 10rem;
+.w-48 {
+  width: 12rem;
 }
 
 .w-56 {

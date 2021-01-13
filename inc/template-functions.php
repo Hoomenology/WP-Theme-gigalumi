@@ -82,6 +82,114 @@ function gigalumi_header_container() {
 }
 
 function gigalumi_nav_container() {
+    $shop_nav = [
+        [
+            'title' => 'Pathway Lights',
+            'url' => '/shop/?filter_cat_list_0=20',
+            'children' => [
+                [
+                    'title' => 'Set of 4',
+                    'url' => '/shop/?filter_cat_list_0=20&product_tag_2=set-of-4'
+                ],
+                [
+                    'title' => 'Set of 6',
+                    'url' => '/shop/?filter_cat_list_0=20&product_tag_2=set-of-6'
+                ],
+                [
+                    'title' => 'Multi-color',
+                    'url' => '/shop/?filter_cat_list_0=20&product_tag_2=multi-color'
+                ],
+                [
+                    'title' => 'Color-Changing',
+                    'url' => '/shop/?filter_cat_list_0=20&product_tag_2=color-changing'
+                ],
+                [
+                    'title' => 'For DIY',
+                    'url' => '/shop/?filter_cat_list_0=20&product_tag_2=for-diy'
+                ],
+            ]
+        ],
+        [
+            'title' => 'String Lights',
+            'url' => '/shop/?filter_cat_list_0=19',
+            'children' => [
+                [
+                    'title' => 'Festival Décor',
+                    'url' => '/shop/?filter_cat_list_0=19&product_tag_2=festival-decor'
+                ],
+                [
+                    'title' => 'Battery Powered',
+                    'url' => '/shop/?filter_cat_list_0=19&product_tag_2=battery-powered'
+                ],
+                [
+                    'title' => 'Solar Powered',
+                    'url' => '/shop/?filter_cat_list_0=19&product_tag_2=solar-powered'
+                ],
+            ]
+        ],
+        [
+            'title' => 'Deck & Wall Lights',
+            'url' => '/shop/?filter_cat_list_0=23',
+            'children' => [
+                [
+                    'title' => 'Cool White Light',
+                    'url' => '/shop/?filter_cat_list_0=23&filter_bulb-color=cool_white'
+                ],
+                [
+                    'title' => 'Warm White Light',
+                    'url' => '/shop/?filter_cat_list_0=23&filter_bulb-color=warm_white'
+                ],
+                [
+                    'title' => 'Stairs / Fence Lights',
+                    'url' => '/shop/?filter_cat_list_0=23&filter_bulb-color=stairs-fence-lights'
+                ],
+            ]
+        ],
+        [
+            'title' => 'Hanging Lights',
+            'url' => '/shop/?filter_cat_list_0=21',
+            'children' => [
+                [
+                    'title' => 'Festival Décor',
+                    'url' => '/shop/?filter_cat_list_0=21&product_tag_2=festival-decor'
+                ],
+                [
+                    'title' => 'For DIY',
+                    'url' => '/shop/?filter_cat_list_0=21&product_tag_2=for-diy'
+                ],
+                [
+                    'title' => 'Christmas Décor',
+                    'url' => '/shop/?filter_cat_list_0=21&product_tag_2=christmas-decor'
+                ],
+            ]
+        ],
+        [
+            'title' => 'Others',
+            'url' => '/shop/?filter_cat_list_0=24',
+            'children' => [
+                [
+                    'title' => 'Home Party',
+                    'url' => '/shop/?filter_cat_list_0=24&product_tag_2=home-party'
+                ],
+                [
+                    'title' => 'Garden Décor ',
+                    'url' => '/shop/?filter_cat_list_0=24&product_tag_2=garden-decor'
+                ],
+                [
+                    'title' => 'Patio Décor',
+                    'url' => '/shop/?filter_cat_list_0=24&product_tag_2=patio-decor'
+                ],
+                [
+                    'title' => 'Multi-Color',
+                    'url' => '/shop/?filter_cat_list_0=24&product_tag_2=multi-color'
+                ],
+                [
+                    'title' => 'Color-Changing',
+                    'url' => '/shop/?filter_cat_list_0=24&product_tag_2=color-changing'
+                ],
+            ]
+        ],
+    ];
     ?>
         <nav id="site-navigation" class="border-t border-b border-gray-300 relative bg-white" role="navigation" aria-label="Primary Navigation">
             <div class="container">
@@ -92,150 +200,24 @@ function gigalumi_nav_container() {
                             <div class="container">
                                 <div class="shop-navigation flex flex-row bg-white p-10 border-t  border-gray-800">
                                     <ul class="nav-grid flex-grow grid grid-cols-3 gap-10 justify-items-center">
+                                        <?php foreach($shop_nav as $nav) :?>
                                         <li class="nav-grid-item w-full">
-                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
-                                                PATH&nbsp; LIGHTS<svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="<?php echo $nav['url'];?>">
+                                                <?php echo $nav['title']; ?><svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                                 </svg>
                                             </a>
+                                            <?php if ($nav['children']) :?>
                                             <ul class="nav-dropdown ">
+                                                <?php foreach($nav['children'] as $nav_child) :?> 
                                                 <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Garden landscape lights</a>
+                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="<?php echo $nav_child['title']; ?>"><?php echo $nav_child['title']; ?></a>
                                                 </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Ground plug</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Style lamp</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Multicolor</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Color-changing</a>
-                                                </li>
+                                                <?php endforeach;?> 
                                             </ul>
+                                            <?php endif;?>
                                         </li>
-                                        <li class="nav-grid-item w-full">
-                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
-                                                STRING&nbsp; LIGHTS<svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </a>
-                                            <ul class="nav-dropdown ">
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Garden landscape lights</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Ground plug</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Style lamp</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Multicolor</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Color-changing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-grid-item w-full">
-                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
-                                            GARDEN&nbsp; STATUS&nbsp; &&nbsp; TOOLS<svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </a>
-                                            <ul class="nav-dropdown ">
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Garden landscape lights</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Ground plug</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Style lamp</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Multicolor</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Color-changing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-grid-item w-full">
-                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
-                                            DECK&nbsp; LIGHTS<svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </a>
-                                            <ul class="nav-dropdown ">
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Garden landscape lights</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Ground plug</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Style lamp</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Multicolor</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Color-changing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-grid-item w-full">
-                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
-                                            HANGING&nbsp; LIGHTS<svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </a>
-                                            <ul class="nav-dropdown ">
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Garden landscape lights</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Ground plug</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Style lamp</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Multicolor</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Color-changing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-grid-item w-full">
-                                            <a class="nav-grid-link text-lg font-bold flex mb-3 hover:text-green-200" href="#">
-                                            OTHER &nbsp;DECORATION<svg class="w-7 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </a>
-                                            <ul class="nav-dropdown ">
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Garden landscape lights</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Ground plug</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Style lamp</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Multicolor</a>
-                                                </li>
-                                                <li class="nav-dropdown-item mb-3">
-                                                    <a class="nav-dropdown-link hover:underline hover:text-green-200" href="#">Color-changing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        <?php endforeach;?>
                                     </ul>
                                     <div class="flex flex-col items-center ml-9">
                                         <img class="max-w-none w-75" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/shop-nav-img.webp" alt="">
@@ -497,11 +479,7 @@ function gigalumi_footer_container() {
                         </div>
                         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
                         <!--End mc_embed_signup-->
-<!--                         
-                        <form action="">
-                            
-                            <label class="my-6 flex h-14 text-center border border-gray-800 rounded-5" for="email"><input class="flex-1 mx-3 bg-gray-100" type="email" name="email" id="email" placeholder="Email Address"><input class="bg-black text-white font-bold h-full px-2" type="submit" value="SUBSCRIBE"></label>
-                        </form> -->
+
                     </div>
                     <div class="call-us">
                         <p class="font-semibold">QUESTIONS? FEEDBACK? CALL US AT</p>
