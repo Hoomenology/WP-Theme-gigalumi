@@ -66,8 +66,9 @@ $sales_info = [
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-
+  
         <div class="home-banner">
+             
             <div class="container banner-inner h-full relative">
                 <div class="banner-off absolute -top-1 -left-1 text-white font-bold  text-lg flex flex-col items-center pt-2 px-9 pb-15 "><p>UP TO</p><p class=" text-5xl leading-10">50%</p><p>OFF</p>
                 </div>
@@ -81,7 +82,6 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-
         <div class="shop-info container flex justify-around items-center h-24 text-base text-black ">
             <div class="shop-info-item flex items-center">
                 <svg class="w-10 h-10 mx-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor"><path fill="#fff" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
@@ -104,8 +104,12 @@ get_header(); ?>
                 <p>Returns & Exchange within 30 days</p>
             </div>
         </div>
-
-        <div class="featured-products bg-gray-100">
+         
+       
+       
+        <div class="featured-products bg-gray-100" >
+        
+             
             <div class="container">
                 <?php storefront_featured_products(['title' => 'Products Recommended']);?>
             </div>
@@ -114,13 +118,13 @@ get_header(); ?>
         <div class="sales-info">
             <div class="container">
                 <section class="storefront-product-section">
-                    <ul class="grid grid-cols-2 gap-7 ">
+                    <ul>
                         <?php foreach ($sales_info as $v) :?>
-                        <li class="relative">
+                        <li class="py-2 relative">
                             <img class="w-full" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']; ?>" alt="">
                             <div class="absolute top-0 w-full h-full flex justify-center">
                                 <div class=" h-full flex flex-col items-center justify-end">
-                                    <h2 class="section-title text-white font-semibold"><?php echo $v['title']; ?></h2>
+                                    <h2 class="text-3xl md:section-title text-white font-bold"><?php echo $v['title']; ?></h2>
                                     <hr class="w-full border-solid border-white opacity-25 mb-2">
                                     <hr class="w-full border-solid border-white opacity-25">
                                     <a href="<?php echo $v['url']; ?>" class="text-white font-semibold my-5"><?php echo $v['go-title']; ?> >></a>
@@ -133,17 +137,17 @@ get_header(); ?>
             </div>
         </div>
         
-        <div class="featured-categories bg-blue-200">
-            <div class="container">
+        <div class="featured-categories bg-blue-200 px-16">
+         <div class="container">
                 <section class="storefront-product-section storefront-product-categories">
-                    <h2 class="section-title">FEATURED CATEGORIES</h2>
+                    <h2 class="section-title font-extrabold text-center md:font-normal ">FEATURED CATEGORIES</h2>
                     <div>
-                        <ul class="grid grid-cols-3 md:grid-cols-6 gap-8">
+                        <ul class="grid grid-cols-2  md:grid-cols-6 gap-8">
                             <?php foreach($featured_categories as $v) : ?>
                             <li>
                                 <a href="<?php echo $v['url']; ?>" class="flex flex-col items-center">
                                     <img class="my-7" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']?>" alt="">
-                                    <p><?php echo $v['title']; ?></p>
+                                    <p class="font-extrabold text-gray-900 text-2xl md:font-normal text-black"><?php echo $v['title']; ?></p>
                                 </a>
                             </li>
                             <?php endforeach;?>
@@ -151,7 +155,7 @@ get_header(); ?>
                     </div>
                 </section>
             </div>
-        </div>
+         </div>
 
         <div class="sale-products">
             <div class="container">
@@ -162,7 +166,8 @@ get_header(); ?>
         <div class="home-slogan container py-12 pl-24">
             <h3 class="font-semibold">WE ILLUMINATE THE NIGHT WITH SUNLIGHT. </h3>
         </div>
-	</div><!-- #primary -->
+
+	</div>
 
 <?php
 do_action( 'storefront_sidebar' );

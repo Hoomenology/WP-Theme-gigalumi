@@ -83,3 +83,12 @@ function toggle_content(e) {
   }
   e.dataset.status = status ^ 1;
 }
+
+// function setHtmlFontSize(){
+//   var html = document.documentElement;
+//   var vw = html.clientWidth;
+//   vw = vw >= 750 ? 750 : vw;
+//   html.style.fontSize = vw/7.5 +'px';
+// }
+// document.addEventListener('DOMContentLoaded', setHtmlFontSize);
+// window.onresize = setHtmlFontSize;

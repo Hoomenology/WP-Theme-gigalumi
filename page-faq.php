@@ -272,7 +272,6 @@ $faqs = [
 ];
 $faqs_count = count($faqs);
 get_header(); ?>
-
 	<div id="primary" class="content-area">
         <div class="container">
             <h1 class="my-6 font-bold">FREQUENTLY ASKED QUESTIONS</h1>

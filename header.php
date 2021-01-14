@@ -38,7 +38,7 @@
     <?php endif; ?>
 
 	<header id="masthead" class="site-header flex items-center" role="banner" style="<?php storefront_header_styles(); ?>">
-
+  
 		<?php
 
         // do_action( 'storefront_header' );

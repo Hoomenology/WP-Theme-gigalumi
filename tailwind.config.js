@@ -31,6 +31,7 @@ module.exports = {
         '16.4': '4.1rem',
       },
       spacing: {
+       
         px: '1px',
         '0': '0',
         '1': '0.25rem',
@@ -47,6 +48,7 @@ module.exports = {
         '14': '3.5rem',
         '15': '3.75rem',
         '16': '4rem',
+        '17': '4.5rem',
         '20': '5rem',
         '24': '6rem',
         '28': '7rem',
