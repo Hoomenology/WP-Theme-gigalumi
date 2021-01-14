@@ -138,6 +138,11 @@ function gigalumi_coupon_label( $lable, $coupon) {
     return $lable . '<br/>[ <span class="text-xs">' . $coupon->get_description() . '</span> ]';
 }
 
+add_filter( 'woocommerce_gallery_image_size', 'gigalumi_gallery_image_size' );
+
+function gigalumi_gallery_image_size() {
+    return '100%';
+}
 
 // add_action( 'rest_api_init', 'register_rest_routes' );
 
