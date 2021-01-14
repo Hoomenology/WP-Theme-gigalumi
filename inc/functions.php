@@ -132,6 +132,13 @@ function new_loop_shop_per_page( $per_page ) {
     return $per_page;
 }
 
+add_filter( 'woocommerce_cart_totals_coupon_label', 'gigalumi_coupon_label', 10, 2);
+
+function gigalumi_coupon_label( $lable, $coupon) {
+    return $lable . '<br/>[ <span class="text-xs">' . $coupon->get_description() . '</span> ]';
+}
+
+
 // add_action( 'rest_api_init', 'register_rest_routes' );
 
 function register_rest_routes() {
