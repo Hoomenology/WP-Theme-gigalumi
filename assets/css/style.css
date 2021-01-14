@@ -187,10 +187,10 @@ Content
   padding: theme('container.padding.default');
 }
 
-@screen sm {
+@screen md {
   .col-full, .site-main, .site-content > .woocommerce {
-    max-width: theme('screens.sm');
-    padding: theme('container.padding.sm');
+    max-width: theme('screens.md');
+    padding: theme('container.padding.md');
   }
 }
 
@@ -201,10 +201,17 @@ Content
   }
 } 
 
-@screen xl {
-  .col-full, .site-main, .site-content > .woocommerce {
-    max-width: theme('screens.xl');
-    padding: theme('container.padding.xl');
+/*
+Footer
+*/
+
+@screen md {
+  .footer-map .fa {
+    @apply hidden;
+  }
+
+  .footer-map .content {
+    @apply block;
   }
 }
 

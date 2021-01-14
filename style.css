@@ -528,22 +528,20 @@ img {
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
+    max-width: 750px;
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
   }
 }
 
@@ -1635,6 +1633,10 @@ img {
        column-gap: 8rem;
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1942,16 +1944,9 @@ Content
   padding: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 750px) {
   .col-full, .site-main, .site-content > .woocommerce {
-    max-width: 640px;
-    padding: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .col-full, .site-main, .site-content > .woocommerce {
-    max-width: 1024px;
+    max-width: 750px;
     padding: 0;
   }
 }
@@ -1960,6 +1955,20 @@ Content
   .col-full, .site-main, .site-content > .woocommerce {
     max-width: 1440px;
     padding: 0;
+  }
+}
+
+/*
+Footer
+*/
+
+@media (min-width: 750px) {
+  .footer-map .fa {
+    display: none;
+  }
+
+  .footer-map .content {
+    display: block;
   }
 }
 
@@ -3136,9 +3145,28 @@ li.faq-item img {
   margin-bottom: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 750px) {
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .md\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

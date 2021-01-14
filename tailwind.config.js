@@ -3,10 +3,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1440px',
+        md: '750px',
+        lg: '1440px',
       },
       inset: {
         '-1': '-0.25rem',
@@ -152,9 +150,8 @@ module.exports = {
         center: true,
         padding: {
           default: '1rem',
-          sm: '2rem',
+          md: '0',
           lg: '0',
-          xl: '0',
         },
       },
     }
