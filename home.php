@@ -53,10 +53,8 @@ $sales_info = [
         'go-title' => 'Shop All Sales'
     ],
     [
-        'title' => "10% OFF<br/>
-        Further Reductions
-        On EVERYTHIN<br/>
-        For NEW SIGN UP",
+        'title' => '10% OFF <span class="text-xl">on</span> EVERYTHIN<br/>
+        For NEW SIGN UP',
         'url' => '/my-account',
         'img' => 'home-sales-2.webp',
         'go-title' => 'Sign Up Now'
