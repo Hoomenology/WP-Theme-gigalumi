@@ -170,11 +170,11 @@ Header
 } 
 
 .woocommerce-mini-cart__buttons a:first-child {
-  @apply hidden;
+  @apply inline-block text-center leading-12 h-12 px-10 text-sm font-bold bg-orange-500 rounded-5 text-white uppercase;
 }
 
 .woocommerce-mini-cart__buttons a.checkout {
-  @apply inline-block text-center leading-12 h-12 px-10 text-sm font-bold bg-orange-500 rounded-5 text-white uppercase;
+  @apply hidden;
 }
 
 
@@ -674,8 +674,12 @@ body.woocommerce-checkout form.woocommerce-cart-form {
   @apply hidden;
 }
 
-.woocommerce-checkout .woocommerce-form-coupon-toggle {
-  @apply hidden;
+.checkout_coupon #coupon_code {
+  @apply border border-solid p-2;
+}
+
+.checkout_coupon button[name="apply_coupon"] {
+  @apply bg-black text-white py-2 px-5;
 }
 
 #order_review_heading {
