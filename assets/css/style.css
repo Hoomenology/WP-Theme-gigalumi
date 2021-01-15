@@ -1033,25 +1033,7 @@ body.logged-in.woocommerce-account #content {
   background-repeat: no-repeat;
   background-size: cover; 
 }
-.home-slogan {
-  background-image: url('assets/images/home-slogan-mobile.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* width: 690px;
-  height: 360px; */
-  /* max-width: 690px;
-  min-height: 360px; */
-  /* object-fit: cover;  */
-  /* height: 360px; */
-}
 
-@screen md {
-  .home-slogan {
-  background-image: url('assets/images/home-slogan.webp');
-  /* width: auto;
-  height: auto; */
-  }
-}
 li.faq-item:first-child {
   @apply border-t;
 }

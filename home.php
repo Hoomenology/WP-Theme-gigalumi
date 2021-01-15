@@ -145,7 +145,7 @@ get_header(); ?>
                             <li>
                                 <a href="<?php echo $v['url']; ?>" class="flex flex-col items-center">
                                     <img class="my-7" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']?>" alt="">
-                                    <p class="font-extrabold text-gray-900 text-2xl md:font-normal text-black"><?php echo $v['title']; ?></p>
+                                    <p class="font-extrabold text-2xl md:font-normal text-black"><?php echo $v['title']; ?></p>
                                 </a>
                             </li>
                             <?php endforeach;?>
@@ -161,9 +161,13 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="home-slogan container py-12 pl-24">
-            <h3 class="font-semibold">WE ILLUMINATE THE NIGHT WITH SUNLIGHT. </h3>
+        <div class="container">
+            <div class="home-slogan md:px-24 md:h-34 bg-yellow-400 pt-5 md:py-0 flex flex-col md:flex-row items-center justify-between">
+                <h3 class="font-semibold text-center md:text-left">WE ILLUMINATE THE NIGHT WITH SUNLIGHT. </h3>
+                <img class="w-full md:w-2/5 pt-5" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-slogan.webp" alt="">
+            </div>
         </div>
+
         <div class="shop-info-mobile container">
             <div class="shop-info-item flex flex-col items-center">
                 <svg class="w-10 h-10 mx-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor"><path fill="#fff" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
