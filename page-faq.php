@@ -302,13 +302,11 @@ get_header(); ?>
                             <ul>
                                 <?php foreach ($faqs[$i]['faqs'] as $v) :?>
                                 <li class="faq-item p-4 border-b border-gray-300">
-                                    <a href="#" class="" onclick="toggle_content(this);return false;" data-status="0">
-                                        <div class="faq-item-question flex items-center justify-between ">
-                                            <h6 class=" "><?php echo $v['question']; ?></h6>
-                                            <i class="fa fa-plus"></i>
-                                        </div>
-                                        <p class="faq-item-content content mt-2 hidden "><?php echo $v['answer']; ?></p>
-                                    </a>                                    
+                                    <div class="faq-item-question flex items-center justify-between " onclick="toggle_content(this);return false;" data-status="0">
+                                        <h6 class=" "><?php echo $v['question']; ?></h6>
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                    <p class="faq-item-content content mt-2 hidden "><?php echo $v['answer']; ?></p>
                                 </li>
                                 <?php endforeach;?>
                             </ul>
