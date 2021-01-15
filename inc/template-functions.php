@@ -385,7 +385,7 @@ function gigalumi_footer_container() {
     <div class="footer-block border-t border-green-200">
 
         <div class="container">
-            <div class="footer-block-inner flex flex-col lg:flex-row justify-between my-12 ">
+            <div class="footer-block-inner flex flex-col lg:flex-row justify-between md:my-12 ">
                 <div class="footer-map text-xm">
                     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-32">
                         <li class="map-item row-span-2" onclick="toggle_content(this);return false;" data-status="1">
@@ -648,7 +648,7 @@ function gigalumi_footer_container() {
 
         <div class="container">
 
-            <div class="footer-aside-inner flex flex-row justify-between items-center py-2">
+            <div class="footer-aside-inner flex  justify-between  py-2">
 
                 <div class="footer-info flex flex-col">
 
