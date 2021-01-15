@@ -68,12 +68,12 @@ get_header(); ?>
         <div class="home-banner">
              
             <div class="container banner-inner h-full relative">
-                <div class="banner-off absolute inset-x-2/4 -top-1 md:-left-1 text-white font-bold  text-lg flex flex-col items-center pt-2 px-9 pb-15 "><p>UP TO</p><p class=" text-5xl leading-10">50%</p><p>OFF</p>
+                <div class="banner-off absolute  -top-1 "><p>UP TO</p><p class=" text-5xl leading-10">50%</p><p>OFF</p>
                 </div>
-                <img class="absolute bottom-0 right-0" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-banner-product.webp" alt="">
-                <div class="banner-content flex flex-col h-full justify-center items-left text-white">
-                    <p class="text-5xl font-bold md:pt-28">WE NOW LAUNCHED!</p>
-                    <p class="pb-4 text-3xl leading-10">Our new website is online now, <br/>Come and celebrate with us!</p>
+                <img  src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-banner-product.webp" alt="">
+                <div class="banner-content flex flex-col h-full   text-white">
+                    <p class="text-3xl  md:text-5xl font-bold md:pt-28">WE NOW LAUNCHED!</p>
+                    <p class="pb-4 text-xl md:text-3xl leading-10">Our new website is online now, <br/>Come and celebrate with us!</p>
                     <p class="pb-4 text-xl">+ Free Delivery </p>
                     <p class="pb-4 text-blue-300">Special Offer Duration: till Feb 5, 2021</p>
                     <a class="go-shop inline-block border-2 border-white rounded-5 w-48 text-center font-semibold my-3 p-3" href="/shop">Shop Launch Sale Now</a>
@@ -122,10 +122,10 @@ get_header(); ?>
                             <img class="w-full" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']; ?>" alt="">
                             <div class="absolute top-0 w-full h-full flex justify-center">
                                 <div class=" h-full flex flex-col items-center justify-end">
-                                    <h2 class="text-3xl md:section-title text-white font-bold"><?php echo $v['title']; ?></h2>
+                                    <h2 class="text-xl md:text-3xl md:section-title text-white font-bold"><?php echo $v['title']; ?></h2>
                                     <hr class="w-full border-solid border-white opacity-25 mb-2">
                                     <hr class="w-full border-solid border-white opacity-25">
-                                    <a href="<?php echo $v['url']; ?>" class="text-white font-semibold my-5"><?php echo $v['go-title']; ?> >></a>
+                                    <a href="<?php echo $v['url']; ?>" class="text-white font-semibold mb-5"><?php echo $v['go-title']; ?> >></a>
                                 </div>
                             </div>
                         </li>
@@ -145,7 +145,7 @@ get_header(); ?>
                             <li>
                                 <a href="<?php echo $v['url']; ?>" class="flex flex-col items-center">
                                     <img class="my-7" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']?>" alt="">
-                                    <p class="font-extrabold text-gray-900 text-2xl md:font-normal text-black"><?php echo $v['title']; ?></p>
+                                    <p class="font-extrabold text-sm text-gray-900 md:text-2xl md:font-normal text-black"><?php echo $v['title']; ?></p>
                                 </a>
                             </li>
                             <?php endforeach;?>
