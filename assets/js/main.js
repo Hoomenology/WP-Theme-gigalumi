@@ -71,7 +71,7 @@ function click_show_content(e) {
 function toggle_content(e) {
   let status = e.dataset.status;
   let icon = e.querySelector('i');
-  let content = e.querySelector('.content');
+  let content = e.parentNode.querySelector('.content');
   if (status == 0) {
     content.classList.remove('hidden');
     icon.classList.remove('fa-plus');

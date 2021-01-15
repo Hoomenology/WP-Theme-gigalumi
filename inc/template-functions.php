@@ -388,8 +388,8 @@ function gigalumi_footer_container() {
             <div class="footer-block-inner flex flex-col lg:flex-row justify-between md:my-12 ">
                 <div class="footer-map text-xm">
                     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-32">
-                        <li class="map-item row-span-2" onclick="toggle_content(this);return false;" data-status="1">
-                            <p class="font-bold my-3 text-base" >Shop Gigalumi<i class="fa fa-minus float-right"></i></p>
+                        <li class="map-item row-span-2" >
+                            <p class="font-bold my-3 text-base" onclick="toggle_content(this);return false;" data-status="1">Shop Gigalumi<i class="fa fa-minus float-right"></i></p>
                             <ul class="map-item-child content ">
                                 <li class="my-4">
 
@@ -424,8 +424,8 @@ function gigalumi_footer_container() {
                             </ul>
 
                         </li>
-                        <li class="map-item row-span-2" onclick="toggle_content(this);return false;" data-status="0">
-                            <p class="font-bold my-3 text-base">My Account<i class="md:hidden fa fa-plus float-right"></i></p>
+                        <li class="map-item row-span-2" >
+                            <p class="font-bold my-3 text-base" onclick="toggle_content(this);return false;" data-status="0">My Account<i class="md:hidden fa fa-plus float-right"></i></p>
                             <ul class="map-item-child content hidden">
                                 <!-- <li class="my-4">
 
@@ -467,8 +467,9 @@ function gigalumi_footer_container() {
 
                         </li>
 
-                        <li class="map-item row-span-2" onclick="toggle_content(this);return false;" data-status="0">
-                            <p class="font-bold my-3 text-base">NEED HELP?<i class="md:hidden fa fa-plus float-right"></i></p>
+                        <li class="map-item row-span-2">
+                            <p class="font-bold my-3 text-base" onclick="toggle_content(this);return false;" data-status="0">NEED HELP?<i class="md:hidden fa fa-plus float-right"></i></p>
+
                             <ul class="map-item-child content hidden">
 
                                 <li class="my-4">
@@ -505,8 +506,9 @@ function gigalumi_footer_container() {
 
                         </li>
 
-                        <!-- <li class="map-item " onclick="toggle_content(this);return false;" data-status="0">
-                            <p class="font-bold my-3 text-base">BLOG<i class="md:hidden fa fa-plus float-right"></i></p>
+                        <!-- <li class="map-item ">
+                            <p class="font-bold my-3 text-base" onclick="toggle_content(this);return false;" data-status="0">BLOG<i class="md:hidden fa fa-plus float-right"></i></p>
+
                             <ul class="map-item-child content hidden">
 
                                 <li class="my-4">
@@ -524,8 +526,8 @@ function gigalumi_footer_container() {
                             </ul>
 
                         </li> -->
-                        <li class="map-item " onclick="toggle_content(this);return false;" data-status="0">
-                            <p class="font-bold my-3 text-base">ABOUT GIGALUMI<i class="md:hidden fa fa-plus float-right"></i></p>
+                        <li class="map-item ">
+                            <p class="font-bold my-3 text-base" onclick="toggle_content(this);return false;" data-status="0">ABOUT GIGALUMI<i class="md:hidden fa fa-plus float-right"></i></p>
                             <ul class="map-item-child content hidden">
                                 <li class="my-4">
 
