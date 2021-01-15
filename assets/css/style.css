@@ -189,7 +189,8 @@ Content
 
 .col-full, .site-main, .site-content > .woocommerce {
   @apply w-full m-auto;
-  padding: theme('container.padding.default');
+  padding-left: theme('container.padding.default');
+  padding-right: theme('container.padding.default');
 }
 
 
@@ -197,7 +198,8 @@ Content
 @screen md {
   .col-full, .site-main, .site-content > .woocommerce {
     max-width: theme('screens.md');
-    padding: theme('container.padding.md');
+    padding-left: theme('container.padding.md');
+    padding-right: theme('container.padding.md');
   }
 }
 
@@ -205,7 +207,8 @@ Content
 @screen lg {
   .col-full, .site-main, .site-content > .woocommerce {
     max-width: theme('screens.lg');
-    padding: theme('container.padding.lg');
+    padding-left: theme('container.padding.lg');
+    padding-right: theme('container.padding.lg');
   }
 } 
 

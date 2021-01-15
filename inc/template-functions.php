@@ -3,23 +3,22 @@
 function gigalumi_header_container() {
     ?>
 
-    <div class="container flex flex-row items-center text-black">
-        <div class="header-branding flex-1 flex items-center">
-            <a href="/" rel="home"><img class="h-15" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo.webp" alt=""></a>
+    <div class="container grid gap-2 grid-cols-3 md:grid-cols-0 md:flex md:flex-row items-center text-black my-4">
+        <div class="header-mini-menu flex-1 md:hidden">
+            <svg class="w-6 h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </div>
+        <div class="header-branding md:order-first flex-1 flex items-center justify-center md:justify-start">
+            <a href="/" rel="home">
+                <picture>
+                    <source srcset="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo.webp" media="(min-width: 750px)">
+                    <img class="h-8 md:h-15" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo-mini.webp" alt="">
+                </picture>
+            </a>
         </div>
         <?php if ( ! is_checkout() ) {?>
-        <div class="header-search flex-1 flex items-center">
-            <form role="search" method="get" class="w-full m-0" action="/">
-                <label for="search-field" class="flex flex-row items-center bg-gray-100 border rounded-5 border-gray-300 h-12 px-3">
-                    <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" required value="" name="s">
-                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg></button>
-                </label>
-                <input type="hidden" name="post_type" value="product">
-            </form>
-        </div>
-        <div class="header-action flex-1 divide-x flex flex-row items-center text-xs">
-            <div class="help mx-7">
+        
+        <div class="header-action md:order-last flex-1 md:divide-x flex flex-row items-center text-xs">
+            <div class="help hidden md:block mx-7">
                 <a href="/help" class="flex flex-row items-center mx-3">
                     <svg class="h-6 w-6 mx-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
@@ -29,10 +28,10 @@ function gigalumi_header_container() {
             </div>
             <div class="account flex flex-row items-center justify-end w-full">
                 <a href="/my-account" class="flex flex-row items-center">
-                    <svg class="h-9 w-9 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-6 w-6 md:h-9 md:w-9 md:mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <div>
+                    <div class="hidden md:block">
                         <?php if ( is_user_logged_in() ) { ?>
                         <p>MY ACCOUNT</p>
                         <?php } else { ?>
@@ -46,9 +45,9 @@ function gigalumi_header_container() {
                     onmouseover="header_cart_over(this);" 
                     <?php }?>
                     >
-                        <svg class="h-8 w-8 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 md:h-8 md:w-8 md:mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>CART ( <?php echo WC()->cart->get_cart_contents_count(); ?> )
+                        </svg><span class="hidden md:block">CART ( <?php echo WC()->cart->get_cart_contents_count(); ?> )</span>
                     </a>
                     <?php if ( ! ( is_cart() || is_checkout() ) ) {?>
                     <svg class="nav-triangle-borderless hidden" viewBox="0 0 20 9" role="presentation"><path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path></svg>
@@ -59,7 +58,7 @@ function gigalumi_header_container() {
             </div>
         </div>
         <?php } else {?>
-        <div class="header-action flex-1 divide-x flex flex-row items-center text-xs font-semibold ">
+        <div class="header-action flex-1 md:divide-x flex flex-row items-center text-xs font-semibold ">
             <div class="account flex flex-row items-center justify-end w-full">
                 <div class="flex flex-row items-center">
                     <svg class="h-9 w-9 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,6 +75,16 @@ function gigalumi_header_container() {
             </div>
         </div>
         <?php }?>
+        <div class="header-search col-span-3 md:order-1 flex-1 flex items-center">
+            <form role="search" method="get" class="w-full m-0" action="/">
+                <label for="search-field" class="flex flex-row items-center bg-gray-100 border rounded-5 border-gray-300 h-10 md:h-12 px-3">
+                    <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" required value="" name="s">
+                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg></button>
+                </label>
+                <input type="hidden" name="post_type" value="product">
+            </form>
+        </div>
     </div>
     <hr>
     <?php
@@ -191,7 +200,7 @@ function gigalumi_nav_container() {
         ],
     ];
     ?>
-        <nav id="site-navigation" class="border-t border-b border-gray-300 relative bg-white" role="navigation" aria-label="Primary Navigation">
+        <nav id="site-navigation" class=" hidden md:block border-t border-b border-gray-300 relative bg-white" role="navigation" aria-label="Primary Navigation">
             <div class="container">
                 <ul id="mega-menu-primary" class="nav-bar flex flex-row items-center justify-between h-15">
                     <li class="nav-bar-item" id="mega-menu-item-252" onmouseover="menu_link_over(this);">

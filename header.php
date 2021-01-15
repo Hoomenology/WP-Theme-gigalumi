@@ -30,7 +30,7 @@
     <?php if ( ! is_checkout() ) : ?>
     <div class="announcement-bar">
         <div class="container">
-            <div class="announcement-bar-inner">
+            <div class="announcement-bar-inner text-xs md:text-base">
                 <a href="/shop"> Up to 50% OFF for New Website Launch | <span class="text-yellow-100">Shop Now →</span></a>
             </div>
         </div>
