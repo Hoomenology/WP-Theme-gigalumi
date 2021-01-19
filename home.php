@@ -73,8 +73,8 @@ get_header(); ?>
                 <img  src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-banner-product.webp" alt="">
                 <div class="banner-content flex flex-col h-full   text-white">
                     <p class="text-3xl  md:text-5xl font-bold md:pt-28">WE NOW LAUNCHED!</p>
-                    <p class="pb-4 text-xl md:text-3xl leading-10">Our new website is online now, <br/>Come and celebrate with us!</p>
-                    <p class="pb-4 text-xl">+ Free Delivery </p>
+                    <p class="pb-4 text-lg md:text-3xl leading-10">Our new website is online now, <br/>Come and celebrate with us!</p>
+                    <p class="pb-4 text-lg">+ Free Delivery </p>
                     <p class="pb-4 text-blue-300">Special Offer Duration: till Feb 5, 2021</p>
                     <a class="go-shop inline-block border-2 border-white rounded-5 w-48 text-center font-semibold my-3 p-3" href="/shop">Shop Launch Sale Now</a>
                 </div>
@@ -122,7 +122,9 @@ get_header(); ?>
                             <img class="w-full" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/<?php echo $v['img']; ?>" alt="">
                             <div class="absolute top-0 w-full h-full flex justify-center">
                                 <div class=" h-full flex flex-col items-center justify-end">
-                                    <h2 class="text-xl md:text-3xl md:section-title text-white font-bold"><?php echo $v['title']; ?></h2>
+
+                                    <h2 class="sales-info-title text-lg md:text-3xl md:section-title text-white font-bold"><?php echo $v['title']; ?></h2>
+
                                     <hr class="w-full border-solid border-white opacity-25 mb-2">
                                     <hr class="w-full border-solid border-white opacity-25">
                                     <a href="<?php echo $v['url']; ?>" class="text-white font-semibold mb-5"><?php echo $v['go-title']; ?> >></a>
@@ -164,7 +166,9 @@ get_header(); ?>
         <div class="container">
             <div class="home-slogan md:px-24 md:h-34 bg-yellow-400 pt-5 md:py-0 flex flex-col md:flex-row items-center justify-between">
                 <h3 class="font-semibold text-center md:text-left">WE ILLUMINATE THE NIGHT WITH SUNLIGHT. </h3>
-                <img class="w-full md:w-2/5 pt-5" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-slogan.webp" alt="">
+
+                <img class="w-full md:w-2/5 pt-1" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/home-slogan.webp" alt="">
+
             </div>
         </div>
 

@@ -84,6 +84,42 @@ function toggle_content(e) {
   e.dataset.status = status ^ 1;
 }
 
+
+// document.addEventListener('DOMContentLoaded', vwshow); window load
+
+function vwshow(){
+  var html = document.documentElement;
+  var vw = html.clientWidth;
+  let nav = document.getElementById('site-navigation');
+  if(vw>=750){
+    nav.classList.remove('nav-mobile');
+  }
+}
+window.onresize = vwshow;//window change
+var  state = true;//global state
+function shownav(){
+  let body=document.querySelector('body')
+  let svgmeau = document.getElementById('header-svg-nav');
+  if(state){
+  svgmeau.firstElementChild.style="display:none";
+  svgmeau.lastElementChild.style="display:block";
+  state=false;
+  body.style="overflow:hidden";
+  }else{
+    svgmeau.firstElementChild.style="display:block";
+    svgmeau.lastElementChild.style="display:none";
+    state=true;
+    body.style="overflow:auto";
+  }
+  let nav = document.getElementById('site-navigation');
+  if(nav.classList.contains('nav-mobile')){
+    nav.classList.remove('nav-mobile')
+  }else{
+    nav.classList.add('nav-mobile')
+  }
+}
+
+
 // function setHtmlFontSize(){
 //   var html = document.documentElement;
 //   var vw = html.clientWidth;
