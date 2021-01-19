@@ -61,8 +61,9 @@ function gigalumi_header_container() {
                     <?php if ( ! ( is_cart() || is_checkout() ) ) {?>
                     <svg class="nav-triangle-borderless hidden" viewBox="0 0 20 9" role="presentation"><path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path></svg>
                     <div class="header-cart-list hidden" onmouseleave="header_cart_leave(this);">
-                        <?php the_widget( 'WC_Widget_Cart', 'title=' ); }?>
+                        <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
                     </div>
+                    <?php }?>
                 </div>
             </div>
         </div>
@@ -209,7 +210,6 @@ function gigalumi_nav_container() {
         ],
     ];
     ?>
-
         <nav id="site-navigation" class=" hidden  md:block border-t border-b border-gray-300 md:relative bg-white" role="navigation" aria-label="Primary Navigation">
 
             <div class="container">
