@@ -105,9 +105,7 @@ get_header(); ?>
          
        
        
-        <div class="featured-products bg-gray-100" >
-        
-             
+        <div class="featured-products bg-gray-100" >     
             <div class="container">
                 <?php storefront_featured_products(['title' => 'Products Recommended']);?>
             </div>
