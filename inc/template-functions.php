@@ -313,7 +313,7 @@ function gigalumi_customer_service_container() {
             'title' => 'Contact Us',
             'id' => 'service-contact',
             'content' => 'Looking for get in touch? Email us at <span class="active font-bold">service@gigalumi.com</span>, and we will get back to you within 24 hours. <br>
-            You can also call us at <span class="active font-bold">866-471-6855</span>. We will be happy to hear your voice!'
+            You can also call us at <span class="active font-bold">1-888-829-9252</span>. We will be happy to hear your voice!'
         ],
     ];
     $service_count = count($service);
