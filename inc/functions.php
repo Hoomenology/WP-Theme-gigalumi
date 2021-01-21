@@ -130,7 +130,8 @@ function new_loop_shop_per_page( $per_page ) {
 add_filter( 'woocommerce_cart_totals_coupon_label', 'gigalumi_coupon_label', 10, 2);
 
 function gigalumi_coupon_label( $lable, $coupon) {
-    return $lable . '<br/>[ <span class="text-xs">' . $coupon->get_description() . '</span> ]';
+    return $lable . ' [ ' . $coupon->get_description() . ' ]';
+    // return $lable . '<br/>[ <span class="text-xs">' . $coupon->get_description() . '</span> ]';
 }
 
 add_filter( 'woocommerce_gallery_image_size', 'gigalumi_gallery_image_size' );
