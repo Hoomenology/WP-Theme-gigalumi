@@ -274,12 +274,13 @@ $faqs_count = count($faqs);
 get_header(); ?>
 	<div id="primary" class="content-area">
         <div class="container">
-            <h1 class="my-6 font-bold">FREQUENTLY ASKED QUESTIONS</h1>
-            <div class="contomer-service flex my-10 divide-x">
-                <div class="menu w-64 mr-8 mb-10">
+            <h1 class="faq-menu-title my-6 font-bold">FREQUENTLY ASKED QUESTIONS</h1>
+            <!-- <p class="font-bold text-xl text-black md:hidden pb-2">Help Topics</p> -->
+            <div class="contomer-service flex flex-col md:flex-row md:my-10 divide-x">
+                <div class="menu faq-menu " id="faq-menu">
                     <ul>
                         <?php for($i = 0; $i < $faqs_count; $i++): ?>
-                        <li class="w-64 mb-9 ">
+                        <li class="faq-menu-items  mb-9 " onclick="faqcontentshow()">
                             <?php if ($faqs[$i]['faqs']) {?>
                             <a class="flex items-center justify-between hover:text-green-200 <?php echo $i == 0 ? 'active' : '';?> text-black font-semibold " href="#<?php echo $faqs[$i]['id'];?>" onclick="click_show_content(this);return false;" data-target="#<?php echo $faqs[$i]['id'];?>">
                                 <p class=" <?php if ($faqs[$i]['level'] == 0 ) echo 'text-lg'; ?>"><?php echo $faqs[$i]['title'];?></p>
@@ -292,7 +293,9 @@ get_header(); ?>
                         <?php endfor; ?>
                     </ul>
                 </div>
-                <div class="content pl-8 w-full">
+                <!-- <p class="">Please click below for answers to the most frequently asked questions. To contact Customer Service , <a href="">Click here</a></p> -->
+                <a class="hidden pb-4 text-green-500  font-bold" id="gobackmenu" onclick="faqmenushow()">< Back</a>
+                <div id="faq-content" class="content hidden md:block md:pl-8 w-full">
                     <ul>
                         <?php for($i = 0; $i < $faqs_count; $i++): ?> 
                         <?php if ($faqs[$i]['faqs']): ?>
@@ -314,6 +317,7 @@ get_header(); ?>
                         <?php endfor; ?>
                     </ul>
                 </div>
+            
             </div>
         </div> 
 	</div><!-- #primary -->

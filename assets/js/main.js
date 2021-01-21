@@ -118,13 +118,46 @@ function shownav(){
     nav.classList.add('nav-mobile')
   }
 }
+var html = document.documentElement;
+var vw = html.clientWidth;
+if(vw>750){
+  function faqcontentshow(){};
+  function faqmenushow(){};
+  function ctmcontentshow(){};
+  function ctmenushow(){};
+}else{
+function faqcontentshow(){
+var faqcontent = document.getElementById('faq-content');
+var faqmenu = document.getElementById('faq-menu');
+var gobackmenu = document.getElementById('gobackmenu');
+   faqmenu.style = "display:none"
+   faqcontent.style = "display:block";
+   gobackmenu.style = "display:block"
+}
+function faqmenushow(){
+  var faqcontent = document.getElementById('faq-content');
+  var faqmenu = document.getElementById('faq-menu');
+  var gobackmenu = document.getElementById('gobackmenu');
+  faqmenu.style = "display:block";
+  faqcontent.style = "display:none";
+  gobackmenu.style = "display:none"
+}
+function ctmcontentshow(){
+  var ct = document.getElementById('contomer-content');
+  var mu = document.getElementById('contomer-menu');
+  var gbt = document.getElementById('gobackct');
+  ct.style = "display:block";
+  mu.style = "display:none";
+  gbt.style = "display:block"
+}
+function ctmenushow(){
+  var ct = document.getElementById('contomer-content');
+  var mu = document.getElementById('contomer-menu');
+  var gbt = document.getElementById('gobackct');
+  ct.style = "display:none";
+  mu.style = "display:block"
+  gbt.style = "display:none"
+}
+}
 
 
-// function setHtmlFontSize(){
-//   var html = document.documentElement;
-//   var vw = html.clientWidth;
-//   vw = vw >= 750 ? 750 : vw;
-//   html.style.fontSize = vw/7.5 +'px';
-// }
-// document.addEventListener('DOMContentLoaded', setHtmlFontSize);
-// window.onresize = setHtmlFontSize;

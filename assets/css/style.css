@@ -436,13 +436,12 @@ h1.woocommerce-products-header__title{
    flex-direction:column;
 }
  .storefront-sorting form.woocommerce-ordering{
-  margin: 20px 0 20px 150px ;
+  margin:70px 0 20px 0;
 }
 .storefront-sorting p.woocommerce-result-count{
   position:absolute;
-  top:210px;
+  top:200px;
   left: -10px;
-  
 }
 .products li .product-action{
   display: none;
@@ -492,7 +491,7 @@ div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger{
 div.product div.summary  .product_title{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  line-height: 1.4rem;
+  line-height: 2.4rem;
 }
 
 .single_variation_wrap .woocommerce-variation-add-to-cart input,
@@ -505,7 +504,7 @@ div.product div.summary  .product_title{
 }
 .single-product div.product section ul.columns-3{
   display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 } 
 
 #tab-description ul li.faq-item:first-child  a div.faq-item-content>div{
@@ -566,8 +565,8 @@ div.product div.summary  .product_title{
 
 /*CART*/
 .hfeed  .site-content .content-area header.entry-header h1.entry-title{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .hfeed  .site-content .content-area  .entry-content form.woocommerce-cart-form  table.shop_table tr.woocommerce-cart-form__cart-item td{
   padding: 0.45em 0;
@@ -646,7 +645,7 @@ form[name="checkout"] #customer_details{
   .hfeed  .site-content .content-area header.entry-header h1.entry-title{
     padding-top: 2.5rem;
     padding-bottom:2.5rem;
-}
+  }
 .hfeed  .site-content .content-area  .entry-content form.woocommerce-cart-form  table.shop_table tr.woocommerce-cart-form__cart-item td{
   padding: 0.25em 1.41575em;
   text-align:right;
@@ -710,6 +709,138 @@ form[name="checkout"]  #customer_details{
   padding-bottom:0;
 }
 }
+
+
+/*about*/
+.about-banner .banner-inner img{
+  height: 150px;
+}
+.about-why .why-inner{
+  width: 100%;
+  padding: 30px 0;
+}
+.about-why .why-inner h1{
+  @apply text-xl;
+  padding-left: 25px;
+}
+.families-inner{
+  height: 16.75rem;  
+}
+.families-inner .families-content{
+  font-size: 23px;
+  margin:0 20px;
+}
+.about-how .how-content{
+  padding: 30px 0;
+}
+.about-how .how-content h2{
+  @apply text-xl;
+  padding-left: 25px;
+}
+
+.about-how .how-inner img{
+  max-width: 50%;
+  margin: 50px auto;
+}
+.about-aim{
+  padding-bottom: 35px;
+}
+@screen md{
+  .about-banner .banner-inner img{
+    height: 18.75rem;
+  }
+  .about-banner-content-title{
+      @apply text-4xl;
+   }
+   .about-why .why-inner{
+    width: 66.7%;
+    padding: 3.5rem;
+  }
+  .about-how .how-content{
+    padding: 0 6rem 0 0;
+  }
+  .families-inner{
+    height: 28.75rem;
+   }
+   .families-inner .families-content{
+    @apply text-3xl;
+    margin-left: 16rem;
+    margin-right: 16rem;
+  }
+  .about-why .why-inner h1{
+    @apply text-4xl;
+    padding-left:0;
+   }
+   .about-how .how-content h2{
+    @apply text-4xl;
+    padding-left:0;
+  }
+  .about-how .how-inner img{
+    max-width:100%;
+    margin: 0;
+  }
+  .about-aim{
+    padding-bottom: 0;
+  }
+}
+
+/*faq*/
+.faq-menu-title{
+ font-size: 20px;
+}
+
+.faq-menu-items{
+ width: 100%;
+}
+.contomer-service .contomer-service-menu,
+.faq-menu{
+  width: 100%;
+}
+.divide-x > :not(template) ~ :not(template) {
+  border-left-width: 0;
+}
+.contomer-service .contomer-pay{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 22px 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.contomer-service .contomer-pay span{
+  margin-bottom:13px; 
+}
+@screen md{
+  .faq-menu-title{
+    @apply text-4xl;
+  }
+  .faq-menu-items{
+    width: 16rem;
+  }
+  .contomer-service .contomer-service-menu,
+  .faq-menu{  
+      width: 16rem;
+      margin-bottom: 2.5rem;
+      margin-right: 2rem;
+  }
+  .divide-x > :not(template) ~ :not(template) {
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+  .contomer-service .contomer-pay{
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem
+  }
+  .contomer-service .contomer-pay span{
+    margin-bottom:0; 
+  }
+}
+
+
 
 
 
@@ -1342,13 +1473,18 @@ body.logged-in.woocommerce-account #content {
 
 .why-inner h1::before, .how-inner h2::before {
   @apply absolute font-black text-green-200 ;
-  font-size: 100px;
+  font-size: 40px;
   content: '‘';
-  left: -50px;
+  left:0;
   line-height: 0.7;
   font-family: Arial;
 }
-
+@screen md{
+  .why-inner h1::before, .how-inner h2::before {
+  font-size: 100px; 
+  left: -50px;
+  }
+}
 
 .static-page h1 {
   @apply my-6 font-extrabold;

@@ -318,13 +318,13 @@ function gigalumi_customer_service_container() {
     $service_count = count($service);
     ?>
     <div class="container">
-        <h1 class="my-6 font-bold">CUSTOMER SERVICE</h1>
-        <div class="contomer-service flex my-10 divide-x">
-            <div class="menu w-64 mr-8 mb-10">
+        <h1 class="my-6 text-xl md:text-4xl font-bold">CUSTOMER SERVICE</h1>
+        <div class="contomer-service flex flex-col md:flex-row  md:my-10 divide-x">
+            <div id="contomer-menu" class="menu contomer-service-menu">
                 <ul>
                     <?php for($i = 0; $i < $service_count; $i++): ?>
-                    <li>
-                        <a class="flex items-center justify-between hover:text-green-200 <?php echo $i == 0 ? 'active' : '';?> w-64 mb-9 font-semibold " href="#<?php echo $service[$i]['id'];?>" onclick="click_show_content(this);return false;" data-target="#<?php echo $service[$i]['id'];?>">
+                    <li onclick="ctmcontentshow()">
+                        <a class="flex items-center justify-between hover:text-green-200 <?php echo $i == 0 ? 'active' : '';?> md:w-64 mb-9 font-semibold " href="#<?php echo $service[$i]['id'];?>" onclick="click_show_content(this);return false;" data-target="#<?php echo $service[$i]['id'];?>">
                             <p><?php echo $service[$i]['title'];?></p>
                             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </a>
@@ -332,20 +332,21 @@ function gigalumi_customer_service_container() {
                     <?php endfor; ?>
                 </ul>
             </div>
-            <div class="content pl-8">
-                <ul>
+            <a class="hidden pb-4 text-green-500  font-bold" id="gobackct" onclick="ctmenushow()">< Back</a>
+            <div id="contomer-content" class="hidden md:block content md:pl-8">
+                <ul class="pb-4 md:pb-0">
                     <?php for($i = 0; $i < $service_count; $i++): ?> 
                     <li id="<?php echo $service[$i]['id'];?>" class="click-item <?php echo $i == 0 ? '' : 'hidden'; ?>">
                         <h5 class="mb-3 font-semibold"><?php echo $service[$i]['title'];?></h5>
-                        <div class="leading-12 w-full">
+                        <div class="leading-6 md:leading-12 w-full">
                             <?php echo $service[$i]['content'];?>
                             <?php if ($i == 0) : ?>
-                            <div class="bg-gray-100 rounded-10 w-1/2 p-10 flex my-8 items-center justify-between">
-                                <span class="font-semibold">1.Credit Card (Stripe)</span>
+                            <div class="contomer-pay bg-gray-100 rounded-10     ">
+                                <span class="font-semibold text-black md:text-gray-600">1.Credit Card (Stripe)</span>
                                 <?php gigalumi_payment_list_icon();?> 
                             </div>
-                            <div class="bg-gray-100 rounded-10 w-1/2 p-10 flex my-8 items-center justify-between" >
-                                <span class="font-semibold">2.PayPal  <a class="active border-b border-green-200 mx-1" href="https://www.paypal.com/us/webapps/mpp/paypal-popup" onclick="javascript:window.open('https://www.paypal.com/us/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">What is PayPal?</a></span>
+                            <div class="contomer-pay bg-gray-100 rounded-10   " >
+                                <span class="font-semibold text-black md:text-gray-600">2.PayPal  <a class="active border-b border-green-200 mx-1" href="https://www.paypal.com/us/webapps/mpp/paypal-popup" onclick="javascript:window.open('https://www.paypal.com/us/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">What is PayPal?</a></span>
                                 <span>
                                     <img class="h-7" src="https://www.paypalobjects.com/digitalassets/c/website/logo/full-text/pp_fc_hl.svg" alt="">
                                 </span>
