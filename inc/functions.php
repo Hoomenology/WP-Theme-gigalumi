@@ -1,6 +1,7 @@
 <?php
 
-//开启WordPress预览webp缩略图预览
+add_filter( 'file_is_displayable_image', 'mimvp_file_is_displayable_image', 10, 2 );
+
 function mimvp_file_is_displayable_image($result, $path) {
     $info = @getimagesize( $path );
     if($info['mime'] == 'image/webp') {
@@ -8,7 +9,6 @@ function mimvp_file_is_displayable_image($result, $path) {
     }
     return $result;
 }
-add_filter( 'file_is_displayable_image', 'mimvp_file_is_displayable_image', 10, 2 );
 
 function euhomy_enqueue_scripts() {
     wp_enqueue_script( 'euhomy-main', get_stylesheet_directory_uri() . '/assets/js/main.js' );
@@ -35,6 +35,8 @@ function sf_child_theme_dequeue_style() {
     wp_dequeue_style( 'storefront-style' );
     wp_dequeue_style( 'storefront-woocommerce-style' );
 }
+
+add_filter( 'woocommerce_product_add_to_cart_url', 'gigalumi_product_add_to_cart_url', 10, 2);
 
 function gigalumi_product_add_to_cart_url($url, $product) {
     $type = $product->get_type();
@@ -76,9 +78,6 @@ function gigalumi_product_add_to_cart_url($url, $product) {
     }
 }
 
-add_filter( 'woocommerce_product_add_to_cart_url', 'gigalumi_product_add_to_cart_url', 10, 2);
-
-
 add_filter( 'woocommerce_product_add_to_cart_text', 'gigalumi_product_add_to_cart_text', 10, 2);
 
 add_filter( 'woocommerce_loop_add_to_cart_link', 'gigalumi_product_add_to_cart_link', 10, 2);
@@ -101,15 +100,11 @@ add_action( 'woocommerce_before_quantity_input_field', 'before_quantity_input_fi
 add_action( 'woocommerce_after_quantity_input_field', 'after_quantity_input_field' );
 
 function before_quantity_input_field() {
-    echo '<span class="quantity-desc">QTY</span><div class="quantity-selector"><button type="button" onclick="quantity_pick(this,-1);" class="quantity-selector-button" data-action="decrease-picker-quantity" aria-label="Decrease quantity by 1" title="Decrease quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
-  </svg></button>';
+    echo '<span class="quantity-desc">QTY</span><div class="quantity-selector"><button type="button" onclick="quantity_pick(this,-1);" class="quantity-selector-button" data-action="decrease-picker-quantity" aria-label="Decrease quantity by 1" title="Decrease quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg></button>';
 }
 
 function after_quantity_input_field() {
-    echo '<button type="button" onclick="quantity_pick(this,1);" class="quantity-selector-button" data-action="increase-picker-quantity" aria-label="Increase quantity by 1" title="Increase quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-  </svg></button></div>';
+    echo '<button type="button" onclick="quantity_pick(this,1);" class="quantity-selector-button" data-action="increase-picker-quantity" aria-label="Increase quantity by 1" title="Increase quantity by 1" value="1"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></button></div>';
 }
 
 add_action( 'woocommerce_register_form', 'the_gigalumi_register_notice' );
@@ -135,13 +130,20 @@ function new_loop_shop_per_page( $per_page ) {
 add_filter( 'woocommerce_cart_totals_coupon_label', 'gigalumi_coupon_label', 10, 2);
 
 function gigalumi_coupon_label( $lable, $coupon) {
-    return $lable . '<br/>[ <span class="text-xs">' . $coupon->get_description() . '</span> ]';
+    return $lable . ' [ ' . $coupon->get_description() . ' ]';
+    // return $lable . '<br/>[ <span class="text-xs">' . $coupon->get_description() . '</span> ]';
 }
 
 add_filter( 'woocommerce_gallery_image_size', 'gigalumi_gallery_image_size' );
 
 function gigalumi_gallery_image_size() {
     return '100%';
+}
+
+add_filter( 'woocommerce_email_additional_content_customer_new_account', 'gigalumi_email_additional_content_customer_new_account');
+
+function gigalumi_email_additional_content_customer_new_account( $content ) {
+    return $content . '<br/><div style="background-color:#D8F2F5;color:black;padding:16px;"><p>Welcome to join Gigalumi! We have prepared a 10% OFF Coupon for you!</p><p>Apply the code when you are checking out!</p><p><strong>10% OFF</strong> New Sign Up Coupon: <strong style="color:#006940;">newsignup</strong></p></div>';
 }
 
 // add_action( 'rest_api_init', 'register_rest_routes' );
