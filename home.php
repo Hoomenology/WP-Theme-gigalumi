@@ -48,7 +48,7 @@ $featured_categories = [
 $sales_info = [
     [
         'title' => '<span class="text-3xl">CELEBRATE WITH US!</span><br/>Up <span class="text-xl">to</span> 50% OFF',
-        'url' => '/shop',
+        'url' => 'https://www.gigalumi.com/sales-launched.html',
         'img' => 'home-sales-1.webp',
         'go-title' => 'Shop All Sales'
     ],
@@ -76,7 +76,7 @@ get_header(); ?>
                     <p class="pb-4 text-lg md:text-3xl leading-10">Our new website is online now, <br/>Come and celebrate with us!</p>
                     <p class="pb-4 text-lg">+ Free Delivery </p>
                     <p class="pb-4 text-blue-300">Special Offer Duration: till Feb 5, 2021</p>
-                    <a class="go-shop inline-block border-2 border-white rounded-5 w-48 text-center font-semibold my-3 p-3" href="/shop">Shop Launch Sale Now</a>
+                    <a class="go-shop inline-block border-2 border-white rounded-5 w-48 text-center font-semibold my-3 p-3" href="https://www.gigalumi.com/sales-launched.html" target="_blank">Shop Launch Sale Now</a>
                 </div>
             </div>
         </div>
@@ -121,11 +121,11 @@ get_header(); ?>
                             <div class="absolute top-0 w-full h-full flex justify-center">
                                 <div class=" h-full flex flex-col items-center justify-end">
 
-                                    <h2 class="sales-info-title text-lg md:text-3xl md:section-title text-white font-bold"><?php echo $v['title']; ?></h2>
+                                    <h2 class="sales-info-title text-lg md:text-3xl md:section-title text-white font-bold text-center"><?php echo $v['title']; ?></h2>
 
                                     <hr class="w-full border-solid border-white opacity-25 mb-2">
                                     <hr class="w-full border-solid border-white opacity-25">
-                                    <a href="<?php echo $v['url']; ?>" class="text-white font-semibold mb-5"><?php echo $v['go-title']; ?> >></a>
+                                    <a href="<?php echo $v['url']; ?>" class="text-white font-semibold mb-5" target="_blank"><?php echo $v['go-title']; ?> >></a>
                                 </div>
                             </div>
                         </li>
