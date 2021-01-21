@@ -955,14 +955,6 @@ img {
   height: 6rem;
 }
 
-.h-75 {
-  height: 18.75rem;
-}
-
-.h-115 {
-  height: 28.75rem;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1005,6 +997,10 @@ img {
 
 .leading-5 {
   line-height: 1.25rem;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .leading-10 {
@@ -1104,19 +1100,9 @@ img {
   margin-right: 1.75rem;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.mx-64 {
-  margin-left: 16rem;
-  margin-right: 16rem;
 }
 
 .my-auto {
@@ -1185,20 +1171,12 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
-}
-
 .mb-9 {
   margin-bottom: 2.25rem;
 }
 
 .ml-9 {
   margin-left: 2.25rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .mr-15 {
@@ -1259,10 +1237,6 @@ img {
 
 .p-10 {
   padding: 2.5rem;
-}
-
-.p-30 {
-  padding: 7.5rem;
 }
 
 .py-0 {
@@ -1368,16 +1342,8 @@ img {
   padding-top: 1.25rem;
 }
 
-.pl-8 {
-  padding-left: 2rem;
-}
-
 .pb-15 {
   padding-bottom: 3.75rem;
-}
-
-.pr-24 {
-  padding-right: 6rem;
 }
 
 .static {
@@ -1520,6 +1486,12 @@ img {
   color: rgba(0, 153, 58, var(--text-opacity));
 }
 
+.text-green-500 {
+  --text-opacity: 1;
+  color: #206A5D;
+  color: rgba(32, 106, 93, var(--text-opacity));
+}
+
 .text-blue-300 {
   --text-opacity: 1;
   color: #d9f5f4;
@@ -1610,20 +1582,12 @@ img {
   width: 14rem;
 }
 
-.w-64 {
-  width: 16rem;
-}
-
 .w-75 {
   width: 18.75rem;
 }
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .w-4\/5 {
@@ -2254,12 +2218,12 @@ h1.woocommerce-products-header__title{
 }
 
 .storefront-sorting form.woocommerce-ordering{
-  margin: 20px 0 20px 150px ;
+  margin:70px 0 20px 0;
 }
 
 .storefront-sorting p.woocommerce-result-count{
   position:absolute;
-  top:210px;
+  top:200px;
   left: -10px;
 }
 
@@ -2320,7 +2284,7 @@ div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger{
 div.product div.summary  .product_title{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  line-height: 1.4rem;
+  line-height: 2.4rem;
 }
 
 .single_variation_wrap .woocommerce-variation-add-to-cart input,
@@ -2567,6 +2531,164 @@ form[name="checkout"] #customer_details{
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom:0;
+  }
+}
+
+/*about*/
+
+.about-banner .banner-inner img{
+  height: 150px;
+}
+
+.about-why .why-inner{
+  width: 100%;
+  padding: 30px 0;
+}
+
+.about-why .why-inner h1{
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+.families-inner{
+  height: 16.75rem;
+}
+
+.families-inner .families-content{
+  font-size: 23px;
+  margin:0 20px;
+}
+
+.about-how .how-content{
+  padding: 30px 0;
+}
+
+.about-how .how-content h2{
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+.about-how .how-inner img{
+  max-width: 50%;
+  margin: 50px auto;
+}
+
+.about-aim{
+  padding-bottom: 35px;
+}
+
+@media (min-width: 750px){
+  .about-banner .banner-inner img{
+    height: 18.75rem;
+  }
+
+  .about-banner-content-title{
+    font-size: 36px;
+  }
+
+  .about-why .why-inner{
+    width: 66.7%;
+    padding: 3.5rem;
+  }
+
+  .about-how .how-content{
+    padding: 0 6rem 0 0;
+  }
+
+  .families-inner{
+    height: 28.75rem;
+  }
+
+  .families-inner .families-content{
+    font-size: 30px;
+    margin-left: 16rem;
+    margin-right: 16rem;
+  }
+
+  .about-why .why-inner h1{
+    font-size: 36px;
+    padding-left:0;
+  }
+
+  .about-how .how-content h2{
+    font-size: 36px;
+    padding-left:0;
+  }
+
+  .about-how .how-inner img{
+    max-width:100%;
+    margin: 0;
+  }
+
+  .about-aim{
+    padding-bottom: 0;
+  }
+}
+
+/*faq*/
+
+.faq-menu-title{
+  font-size: 20px;
+}
+
+.faq-menu-items{
+  width: 100%;
+}
+
+.contomer-service .contomer-service-menu,
+.faq-menu{
+  width: 100%;
+}
+
+.divide-x > :not(template) ~ :not(template) {
+  border-left-width: 0;
+}
+
+.contomer-service .contomer-pay{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 22px 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.contomer-service .contomer-pay span{
+  margin-bottom:13px;
+}
+
+@media (min-width: 750px){
+  .faq-menu-title{
+    font-size: 36px;
+  }
+
+  .faq-menu-items{
+    width: 16rem;
+  }
+
+  .contomer-service .contomer-service-menu,
+  .faq-menu{
+    width: 16rem;
+    margin-bottom: 2.5rem;
+    margin-right: 2rem;
+  }
+
+  .divide-x > :not(template) ~ :not(template) {
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
+  .contomer-service .contomer-pay{
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem
+  }
+
+  .contomer-service .contomer-pay span{
+    margin-bottom:0;
   }
 }
 
@@ -3691,11 +3813,18 @@ body.logged-in.woocommerce-account #content {
   --text-opacity: 1;
   color: #206a5d;
   color: rgba(32, 106, 93, var(--text-opacity));
-  font-size: 100px;
+  font-size: 40px;
   content: '‘';
-  left: -50px;
+  left:0;
   line-height: 0.7;
   font-family: Arial;
+}
+
+@media (min-width: 750px){
+  .why-inner h1::before, .how-inner h2::before {
+    font-size: 100px;
+    left: -50px;
+  }
 }
 
 .static-page h1 {
@@ -3904,6 +4033,10 @@ li.faq-item img {
     height: 8.5rem;
   }
 
+  .md\:h-115 {
+    height: 28.75rem;
+  }
+
   .md\:text-base {
     font-size: 16px;
   }
@@ -3916,8 +4049,16 @@ li.faq-item img {
     font-size: 30px;
   }
 
+  .md\:text-4xl {
+    font-size: 36px;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
+  }
+
+  .md\:leading-12 {
+    line-height: 3rem;
   }
 
   .md\:mx-3 {
@@ -3925,9 +4066,27 @@ li.faq-item img {
     margin-right: 0.75rem;
   }
 
+  .md\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
   .md\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .md\:mx-64 {
+    margin-left: 16rem;
+    margin-right: 16rem;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:p-30 {
+    padding: 7.5rem;
   }
 
   .md\:py-0 {
@@ -3937,6 +4096,18 @@ li.faq-item img {
 
   .md\:px-24 {
     padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0;
+  }
+
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .md\:pr-24 {
     padding-right: 6rem;
   }
 
@@ -3952,12 +4123,22 @@ li.faq-item img {
     text-align: left;
   }
 
+  .md\:text-gray-600 {
+    --text-opacity: 1;
+    color: #a0a0a0;
+    color: rgba(160, 160, 160, var(--text-opacity));
+  }
+
   .md\:w-8 {
     width: 2rem;
   }
 
   .md\:w-9 {
     width: 2.25rem;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
   }
 
   .md\:w-2\/5 {
