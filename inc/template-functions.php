@@ -6,12 +6,9 @@ function gigalumi_header_container() {
     <div class="container grid gap-2 grid-cols-3 md:grid-cols-0 md:flex md:flex-row items-center text-black my-4">
 
         <div class="header-mini-menu flex-1 md:hidden"  >
-            <!-- <div class="header-svg"></div>
-            <div class="header-svg"></div>
-            <div class="header-svg"></div> -->
             <div id="header-svg-nav"  onclick="shownav()"><svg  class="w-6 h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
             <svg class="w-6 hidden h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-          </div>
+        </div>
           
         </div>
         <div class="header-branding md:order-first flex-1 flex items-center justify-center md:justify-start">
@@ -65,6 +62,16 @@ function gigalumi_header_container() {
                 </div>
             </div>
         </div>
+        <div class="header-search col-span-3 md:order-1 flex-1 flex items-center">
+            <form role="search" method="get" class="w-full m-0" action="/">
+                <label for="search-field" class="flex flex-row items-center bg-gray-100 border rounded-5 border-gray-300 h-10 md:h-12 px-3">
+                    <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" required value="" name="s">
+                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg></button>
+                </label>
+                <input type="hidden" name="post_type" value="product">
+            </form>
+        </div>
         <?php } else {?>
         <div class="header-action flex-1 md:divide-x flex flex-row items-center text-xs font-semibold ">
             <div class="account flex flex-row items-center justify-end w-full">
@@ -83,16 +90,6 @@ function gigalumi_header_container() {
             </div>
         </div>
         <?php }?>
-        <div class="header-search col-span-3 md:order-1 flex-1 flex items-center">
-            <form role="search" method="get" class="w-full m-0" action="/">
-                <label for="search-field" class="flex flex-row items-center bg-gray-100 border rounded-5 border-gray-300 h-10 md:h-12 px-3">
-                    <input type="search" id="search-field" class="flex-auto bg-gray-100 text-gray-700" placeholder="Search for gigalumi" required value="" name="s">
-                    <button type="submit" value="Search" class=""><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg></button>
-                </label>
-                <input type="hidden" name="post_type" value="product">
-            </form>
-        </div>
     </div>
     <hr>
     <?php
