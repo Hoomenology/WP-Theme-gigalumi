@@ -2,14 +2,13 @@
 
 function gigalumi_header_container() {
     ?>
-
+    <?php if ( ! is_checkout() ) {?>
     <div class="container grid gap-2 grid-cols-3 md:grid-cols-0 md:flex md:flex-row items-center text-black my-4">
-
         <div class="header-mini-menu flex-1 md:hidden"  >
-            <div id="header-svg-nav"  onclick="shownav()"><svg  class="w-6 h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-            <svg class="w-6 hidden h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-        </div>
-          
+            <div id="header-svg-nav"  onclick="shownav()">
+                <svg  class="w-6 h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                <svg class="w-6 hidden h-6 md:w-8 md:h-8 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </div>
         </div>
         <div class="header-branding md:order-first flex-1 flex items-center justify-center md:justify-start">
             <a href="/" rel="home">
@@ -19,8 +18,6 @@ function gigalumi_header_container() {
                 </picture>
             </a>
         </div>
-        <?php if ( ! is_checkout() ) {?>
-        
         <div class="header-action md:order-last flex-1 md:divide-x flex flex-row items-center text-xs">
             <div class="help hidden md:block mx-7">
                 <a href="/help" class="flex flex-row items-center mx-3">
@@ -72,13 +69,21 @@ function gigalumi_header_container() {
                 <input type="hidden" name="post_type" value="product">
             </form>
         </div>
-        <?php } else {?>
+    
+    <?php } else {?>
+    <div class="container flex flex-row items-center text-black my-4">
+        <div class="header-branding flex md:justify-start">
+            <picture>
+                <source srcset="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo.webp" media="(min-width: 750px)">
+                <img class="h-8 md:h-15" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo-mini.webp" alt="">
+            </picture>
+        </div>
         <div class="header-action flex-1 md:divide-x flex flex-row items-center text-xs font-semibold ">
-            <div class="account flex flex-row items-center justify-end w-full">
-                <div class="flex flex-row items-center">
-                    <svg class="h-9 w-9 mx-3 text-green-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="account flex flex-row items-center justify-between md:justify-end w-full">
+                <div class="flex flex-row items-center pl-2 md:pl-0 text-sm md:text-xs">
+                    <svg class="h-9 w-9 mx-3 text-green-200 hidden md:block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>SECURE CHECKOUT
+                    </svg><span class="hidden md:block">SECURE &nbsp;</span> CHECKOUT
                 </div>
                 <div class="cart relative">
                     <a href="/cart" class="flex flex-row items-center ml-5 ">
@@ -210,7 +215,9 @@ function gigalumi_nav_container() {
             <div class="container">
                 <ul id="mega-menu-primary" class="nav-bar flex flex-col md:flex-row md:items-center justify-between md:h-15">
                     <li class="nav-bar-item" id="mega-menu-item-252" onmouseover="menu_link_over(this);">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/shop" aria-haspopup="true" aria-expanded="false" tabindex="0">Shop<span class="mega-indicator"></span></a>
+                        <a class="nav-bar-link block h-15 leading-15 text-sm font-bold" href="/shop" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                            Shop<span class="mega-indicator"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
                         <div class="sub-menu z-100 absolute hidden w-full"  onmouseleave="menu_link_leave(this);">
                             <div class="container">
                                 <div class="shop-navigation flex flex-row bg-white p-10 border-t  border-gray-800">
@@ -244,33 +251,30 @@ function gigalumi_nav_container() {
                                 </div>
                             </div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/product-category/pathway-lights/" tabindex="0">Solar Path Lights</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                        <a class="nav-bar-link block h-15 leading-15 text-sm font-bold" href="/product-category/pathway-lights/" tabindex="0">
+                            Solar Path Lights
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/product-category/string-lights/" tabindex="0">Solar String Lights</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                        <a class="nav-bar-link block h-15 leading-15 text-sm font-bold" href="/product-category/string-lights/" tabindex="0">
+                            Solar String Lights
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
                     </li>
                     <li class="nav-bar-item" id="mega-menu-item-251">
-                        <a class="nav-bar-link inline-block h-15 leading-15 text-sm font-bold" href="/product-category/deck-wall-lights/" tabindex="0">Deck Lights & Others</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                        <a class="nav-bar-link block h-15 leading-15 text-sm font-bold" href="/product-category/deck-wall-lights/" tabindex="0">
+                            Deck Lights & Others
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
                     </li>
                     <li class=" nav-bar-item " id="mega-menu-item-251">
-                        <a class="nav-bar-link text-red-200 inline-block h-15 leading-15 text-sm font-bold" href="/shop/?pr_onsale=1" tabindex="0">SALE</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                        <a class="nav-bar-link text-red-200 block h-15 leading-15 text-sm font-bold" href="/shop/?pr_onsale=1" tabindex="0">
+                            SALE
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="md:hidden"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
                     </li>
                 </ul>
             </div>
