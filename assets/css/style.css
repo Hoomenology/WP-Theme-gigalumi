@@ -831,6 +831,9 @@ form[name="checkout"]  #customer_details{
 .contomer-service .contomer-pay span{
   margin-bottom:13px; 
 }
+.woocommerce-review-link{
+  display: inline-block;
+}
 @screen md{
   .faq-menu-title{
     @apply text-4xl;
@@ -858,6 +861,12 @@ form[name="checkout"]  #customer_details{
   }
   .contomer-service .contomer-pay span{
     margin-bottom:0; 
+  }
+  #contomer-content{
+    padding-left: 2rem;
+   }
+   .woocommerce-review-link{
+    display: inline;
   }
 }
 
