@@ -674,6 +674,19 @@ form[name="checkout"] #customer_details{
   margin-bottom: 0;
 }
 
+form.woocommerce-EditAccountForm fieldset{
+    padding: 0;
+}
+.woocommerce .woocommerce-MyAccount-content{
+  padding: 0.5rem;
+}
+#payment .payment_methods > .woocommerce-PaymentMethod > label{
+  padding: 1.2em;
+}
+#payment .payment_methods li .payment_box {
+  padding: 1.41575em 0.2em;
+}
+
 
 
 @screen md{
@@ -742,6 +755,18 @@ form[name="checkout"]  #customer_details{
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom:0;
+}
+form.woocommerce-EditAccountForm fieldset{
+  padding: 1.618em;
+}
+.woocommerce .woocommerce-MyAccount-content{
+  padding: 1.75rem;
+}
+#payment .payment_methods > .woocommerce-PaymentMethod > label{
+  padding: 1.41575em;
+}
+#payment .payment_methods li .payment_box {
+  padding: 1.41575em;
 }
 }
 
