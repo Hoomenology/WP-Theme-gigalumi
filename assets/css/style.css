@@ -94,11 +94,15 @@ Header
 */
 
 .announcement-bar {
-  @apply bg-green-200;
-  height: 40px;
+  @apply bg-green-200 text-xs;
+  height: 80px;
   color: white;
   text-align: center;
   line-height: 40px;
+}
+
+.announcement-bar-inner {
+  @apply flex flex-col justify-between;
 }
 
 .site-header {
@@ -111,6 +115,16 @@ Header
 }
 
 @screen md {
+  
+  .announcement-bar {
+    @apply text-base;
+    height: 40px;
+  }
+
+  .announcement-bar-inner {
+    @apply  flex-row;
+  }
+  
   .site-header {
     height: 100px;
   }

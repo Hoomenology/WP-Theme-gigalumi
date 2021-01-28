@@ -807,6 +807,10 @@ img {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -1813,10 +1817,17 @@ Header
   --bg-opacity: 1;
   background-color: #206a5d;
   background-color: rgba(32, 106, 93, var(--bg-opacity));
-  height: 40px;
+  font-size: 14px;
+  height: 80px;
   color: white;
   text-align: center;
   line-height: 40px;
+}
+
+.announcement-bar-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .site-header {
@@ -1831,6 +1842,15 @@ Header
 }
 
 @media (min-width: 750px) {
+  .announcement-bar {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .announcement-bar-inner {
+    flex-direction: row;
+  }
+
   .site-header {
     height: 100px;
   }
@@ -2685,6 +2705,10 @@ form[name="checkout"] #customer_details{
   margin-bottom:13px;
 }
 
+.woocommerce-review-link{
+  display: inline-block;
+}
+
 @media (min-width: 750px){
   .faq-menu-title{
     font-size: 36px;
@@ -2717,6 +2741,14 @@ form[name="checkout"] #customer_details{
 
   .contomer-service .contomer-pay span{
     margin-bottom:0;
+  }
+
+  #contomer-content{
+    padding-left: 2rem;
+  }
+
+  .woocommerce-review-link{
+    display: inline;
   }
 }
 
@@ -4071,9 +4103,12 @@ li.faq-item img {
     height: 8.5rem;
   }
 
+  .md\:h-115 {
+    height: 28.75rem;
+  }
+
   .md\:text-xs {
     font-size: 14px;
-
   }
 
   .md\:text-base {
@@ -4138,8 +4173,20 @@ li.faq-item img {
     padding-right: 6rem;
   }
 
+  .md\:pb-0 {
+    padding-bottom: 0;
+  }
+
   .md\:pl-0 {
     padding-left: 0;
+  }
+
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .md\:pr-24 {
+    padding-right: 6rem;
   }
 
   .md\:pt-28 {
