@@ -313,7 +313,9 @@ function gigalumi_customer_service_container() {
             'title' => 'Contact Us',
             'id' => 'service-contact',
             'content' => 'Looking for get in touch? Email us at <span class="active font-bold">service@gigalumi.com</span>, and we will get back to you within 24 hours. <br>
-            You can also call us at <span class="active font-bold">1-888-829-9252</span>. We will be happy to hear your voice!'
+            You can also call us at <span class="active font-bold">1-888-829-9252</span>. We will be happy to hear your voice!<br/>
+            Company: Ningbo Heyme Technology Inc<br/>
+            Company Address: 2-2, 247 Wangshan Rd., Jiangbei District, Ningbo, Zhejiang, China, 315036'
         ],
     ];
     $service_count = count($service);
